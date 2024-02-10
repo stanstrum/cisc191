@@ -1,5 +1,7 @@
 package cisc191.sdmesa.edu;
 
+import java.awt.Color;
+
 /**
  * Lead Author(s):
  * @author
@@ -23,7 +25,27 @@ package cisc191.sdmesa.edu;
 
 // TODO: Implement and comment all IS-A (inheritance) relationships
 
-public class Unicycle
+public class Unicycle extends Cycle
 {
-	// TODO: Implement and comment HAS-A relationships separately
+	Unicycle(String make) {
+		super(make);
+	}
+
+	@Override
+	int getNumberOfWheels() {
+		// TODO Auto-generated method stub
+		throw new UnsupportedOperationException("Unimplemented method 'getNumberOfWheels'");
+	}
+
+	@Override
+	Color getColor() {
+		// TODO Auto-generated method stub
+		throw new UnsupportedOperationException("Unimplemented method 'getColor'");
+	}
+
+	@Override
+	void setColor(Color newColor) {
+		// TODO Auto-generated method stub
+		throw new UnsupportedOperationException("Unimplemented method 'setColor'");
+	}
 }
