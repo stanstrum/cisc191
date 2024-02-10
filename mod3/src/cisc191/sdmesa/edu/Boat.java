@@ -26,7 +26,7 @@ public class Boat
 	private String make;
 	private Color color;
 	private int speed;
-	private int price;
+	private int price = -1;
 	private int serialNumber;
 	private Person owner;
 
@@ -126,10 +126,14 @@ public class Boat
 		this.owner = owner;
 	}
 
-	Boat() {}
+	Boat() {
+		this.serialNumber = Boat.createNewSerialNumber();
+	}
+
 	Boat(String make, Color color) {
 		this.make = make;
 		this.color = color;
+		this.serialNumber = Boat.createNewSerialNumber();
 	}
 
 	Boat(Boat other) {
@@ -137,18 +141,24 @@ public class Boat
 		this.color = other.color;
 		this.speed = other.speed;
 		this.price = other.price;
-		this.serialNumber = other.serialNumber;
+		this.serialNumber = Boat.createNewSerialNumber();
 	}
 
 	public void speedUp() {
-		throw new UnsupportedOperationException("Not implemented");
+		this.speed++;
 	}
 
 	public void slowDown() {
-		throw new UnsupportedOperationException("Not implemented");
+		this.speed--;
 	}
 
+	private static int nextSerialNumber = 1;
 	public static int createNewSerialNumber() {
-		throw new UnsupportedOperationException("Not implemented");
+		return nextSerialNumber++;
+	}
+
+	@Override
+	public String toString() {
+		return "Boat: make: " + this.make + " color: " + this.color.toString();
 	}
 }

@@ -7,20 +7,26 @@ package cisc191.sdmesa.edu;
  */
 
 public class Harbor {
-  public Boat getBoatAt(int arg0) {
-    throw new UnsupportedOperationException("Not implemented");
+  private Boat[] inventory;
+
+  public Boat getBoatAt(int index) {
+    return this.inventory[index];
   }
 
-  Harbor(int a) {
-    throw new UnsupportedOperationException("Not implemented");
+  Harbor(int slips) {
+    this.inventory = new Boat[slips];
   }
 
-  public Boat parkBoatAt(Boat boat, int arg0) {
-    throw new UnsupportedOperationException("Not implemented");
+  public Boat parkBoatAt(Boat boat, int index) {
+    Boat oldBoat = this.inventory[index];
+
+    this.inventory[index] = boat;
+
+    return oldBoat;
   }
 
   public Boat[] getInventory() {
-    throw new UnsupportedOperationException("Not implemented");
+    return this.inventory.clone();
   }
 }
 

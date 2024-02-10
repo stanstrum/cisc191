@@ -8,6 +8,8 @@ package cisc191.sdmesa.edu;
 
 public class Person {
   private String name;
+  private String phoneNumber;
+  private String zipCode;
 
   /**
    * @return {@link Person#name}
@@ -25,8 +27,20 @@ public class Person {
     this.name = name;
   }
 
-  Person(String arg0, String arg1, String arg2) {
-    throw new UnsupportedOperationException("Not implemented");
+  Person(String name, String phoneNumber, String zipCode) {
+    this.name = name;
+    this.phoneNumber = phoneNumber;
+    this.zipCode = zipCode;
+  }
+
+  @Override
+  public String toString() {
+    return String.format(
+      "%s %s %s",
+      this.name,
+      this.phoneNumber,
+      this.zipCode
+    );
   }
 }
 
