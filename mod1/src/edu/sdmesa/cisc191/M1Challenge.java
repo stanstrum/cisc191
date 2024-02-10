@@ -45,8 +45,7 @@ public class M1Challenge
 	 */
 	public static int multiply(int a, int b)
 	{
-		// TODO: change this to make the tests pass
-		return -11111;
+		return a * b;
 	}
 
 	/**
@@ -58,8 +57,9 @@ public class M1Challenge
 	 */
 	public static int getFirst(int[] array)
 	{
-		// TODO: change this method to make the tests pass
-		return -77777;
+		assert array.length != 0 : "Cannot get first element of an empty array";
+
+		return array[0];
 	}
 
 	/**
@@ -71,8 +71,11 @@ public class M1Challenge
 	 */
 	public static int getLast(int[] array)
 	{
-		// TODO: change this method to make the tests pass
-		return -88888;
+		assert array.length != 0 : "Cannot get last element of an empty array";
+
+		int lastIndex = array.length - 1;
+
+		return array[lastIndex];
 	}
 
 	/**
@@ -84,7 +87,16 @@ public class M1Challenge
 	 */
 	public static int getMiddle(int[] array)
 	{
-		// TODO: change this method to make the tests pass
-		return -99999;
+		assert array.length % 2 == 1 : "Cannot get middle element of an evenly-sized array";
+
+		// Guaranteed to be even as `array.length` is odd
+		int lastIndex = array.length - 1;
+
+		// `lastIndex` is even, so no worry about integer division here.
+		// If `array.length` is 5, then `lastIndex` is 4, and
+		// the index of the middle element will be 2.
+		int middleIndex = lastIndex / 2;
+
+		return array[middleIndex];
 	}
 }
