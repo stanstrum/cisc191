@@ -87,6 +87,8 @@ public class M1Challenge
 	 */
 	public static int getMiddle(int[] array)
 	{
+		// You could do away with this assertion, however it would permit
+		// the function to return dubious values
 		assert array.length % 2 == 1 : "Cannot get middle element of an evenly-sized array";
 
 		// Guaranteed to be even as `array.length` is odd
@@ -98,5 +100,89 @@ public class M1Challenge
 		int middleIndex = lastIndex / 2;
 
 		return array[middleIndex];
+	}
+
+	/**
+	 * Returns the smallest element in an array
+	 *
+	 * @param array to search
+	 *
+	 * @return the smallest value in the array
+	 */
+	public static int min(int[] array) {
+		// Prevents OutOfBoundsException
+		assert array.length != 0 : "Cannot find smallest value of an empty array";
+
+		// Use a value from the array rather than a null Integer, zero,
+		// or Integer.MIN_VALUE -- much cleaner
+		int smallest = array[0];
+
+		for (int item : array) {
+			if (item < smallest) {
+				smallest = item;
+			}
+		}
+
+		return smallest;
+	}
+
+	/**
+	 * Returns the largest element in an array
+	 *
+	 * @param array to search
+	 *
+	 * @return the largest value in the array
+	 */
+	public static int max(int[] array) {
+		// Prevents OutOfBoundsException
+		assert array.length != 0 : "Cannot find largest value of an empty array";
+
+		// Use a value from the array rather than a null Integer, zero,
+		// or Integer.MIN_VALUE -- much cleaner
+		int largest = array[0];
+
+		for (int item : array) {
+			if (item > largest) {
+				largest = item;
+			}
+		}
+
+		return largest;
+	}
+
+	/**
+	 * Sums an integer array
+	 *
+	 * @param array array to sum up
+	 *
+	 * @return the sum of the array
+	 */
+	public static int sum(int[] array) {
+		// No length assertion needed: an empty array has a sum of zero.
+
+		// Maybe we should use a larger data type since sum could overflow
+		int sum = 0;
+
+		for (int item : array) {
+			sum += item;
+		}
+
+		return sum;
+	}
+
+	/**
+	 * Returns the average of an array of integers
+	 *
+	 * @param array array to calculate average of
+	 *
+	 * @return the array's average
+	 */
+	public static float average(int[] array) {
+		// Necessary because the array length is the dividend
+		assert array.length != 0 : "Cannot find the average value of an empty array";
+
+		float sum = sum(array);
+
+		return sum / (float)array.length;
 	}
 }
