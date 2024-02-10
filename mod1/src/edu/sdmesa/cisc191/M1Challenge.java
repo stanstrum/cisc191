@@ -109,7 +109,8 @@ public class M1Challenge
 	 *
 	 * @return the smallest value in the array
 	 */
-	public static int min(int[] array) {
+	public static int min(int[] array)
+	{
 		// Prevents OutOfBoundsException
 		assert array.length != 0 : "Cannot find smallest value of an empty array";
 
@@ -117,8 +118,10 @@ public class M1Challenge
 		// or Integer.MIN_VALUE -- much cleaner
 		int smallest = array[0];
 
-		for (int item : array) {
-			if (item < smallest) {
+		for (int item : array)
+		{
+			if (item < smallest)
+			{
 				smallest = item;
 			}
 		}
@@ -133,7 +136,8 @@ public class M1Challenge
 	 *
 	 * @return the largest value in the array
 	 */
-	public static int max(int[] array) {
+	public static int max(int[] array)
+	{
 		// Prevents OutOfBoundsException
 		assert array.length != 0 : "Cannot find largest value of an empty array";
 
@@ -141,8 +145,10 @@ public class M1Challenge
 		// or Integer.MIN_VALUE -- much cleaner
 		int largest = array[0];
 
-		for (int item : array) {
-			if (item > largest) {
+		for (int item : array)
+		{
+			if (item > largest)
+			{
 				largest = item;
 			}
 		}
@@ -157,13 +163,15 @@ public class M1Challenge
 	 *
 	 * @return the sum of the array
 	 */
-	public static int sum(int[] array) {
+	public static int sum(int[] array)
+	{
 		// No length assertion needed: an empty array has a sum of zero.
 
 		// Maybe we should use a larger data type since sum could overflow
 		int sum = 0;
 
-		for (int item : array) {
+		for (int item : array)
+		{
 			sum += item;
 		}
 
@@ -177,7 +185,8 @@ public class M1Challenge
 	 *
 	 * @return the array's average
 	 */
-	public static float average(int[] array) {
+	public static float average(int[] array)
+	{
 		// Necessary because the array length is the dividend
 		assert array.length != 0 : "Cannot find the average value of an empty array";
 
