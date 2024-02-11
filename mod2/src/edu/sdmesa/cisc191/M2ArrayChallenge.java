@@ -111,15 +111,31 @@ public class M2ArrayChallenge
 		return true;
 	}
 
+	/**
+	 * Swaps an element of an integer array with its next element
+	 *
+	 * @param array array to swap elements of
+	 * @param index index to swap with its successor
+	 *
+	 * @return the array with two elements swapped
+	 *
+	 * @throws ArrayIndexOutOfBoundsException if called with the last index of the array because the last item has no successor
+	 */
 	public static int[] swap(int[] array, int index) {
+		// Assign names to indices for clarity
 		int currIndex = index;
 		int nextIndex = index + 1;
 
+		// Save the current value
 		int temp = array[currIndex];
 
+		// Overwrite the current value with the next value
 		array[currIndex] = array[nextIndex];
+
+		// Write the current value to the next index
 		array[nextIndex] = temp;
 
+		// Return the modified array
 		return array;
 	}
 
