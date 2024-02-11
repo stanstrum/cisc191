@@ -31,8 +31,10 @@ public class M2ArrayChallenge
 	 */
 	public static boolean contains(int[] array, int value)
 	{
-		for (int item : array) {
-			if (value == item) {
+		for (int item : array)
+		{
+			if (value == item)
+			{
 				return true;
 			}
 		}
@@ -42,8 +44,10 @@ public class M2ArrayChallenge
 
 	public static int find(int[] array, int value)
 	{
-		for (int i = 0; i < array.length; i++) {
-			if (array[i] == value) {
+		for (int i = 0; i < array.length; i++)
+		{
+			if (array[i] == value)
+			{
 				return i;
 			}
 		}
@@ -64,14 +68,17 @@ public class M2ArrayChallenge
 	 *
 	 * @return the occurances of `value` in `array`
 	 */
-	public static int countValues(char[] array, char value) {
+	public static int countValues(char[] array, char value)
+	{
 		// The amount of times `value` is found in `array`
 		int count = 0;
 
 		// For every character in `array`
-		for (char ch : array) {
+		for (char ch : array)
+		{
 			// If the character matches `value` ...
-			if (ch == value) {
+			if (ch == value)
+			{
 				// Increment our occurance counter (`count`)
 				count++;
 			}
@@ -88,16 +95,19 @@ public class M2ArrayChallenge
 	 *
 	 * @return `true` if the array is in order, `false` otherwise
 	 */
-	public static boolean inOrder(int[] array) {
+	public static boolean inOrder(int[] array)
+	{
 		// Loop for all indices except last
-		for (int i = 0; i < array.length - 1; i++) {
+		for (int i = 0; i < array.length - 1; i++)
+		{
 			// Get current & next value
 			int currValue = array[i];
 			int nextValue = array[i + 1];
 
 			// No value shall be greater than its succcessor
 			// If current value is less than the next value ...
-			if (currValue > nextValue) {
+			if (currValue > nextValue)
+			{
 				// Indicate that the array is not in order
 				return false;
 			}
@@ -121,7 +131,8 @@ public class M2ArrayChallenge
 	 *
 	 * @throws ArrayIndexOutOfBoundsException if called with the last index of the array because the last item has no successor
 	 */
-	public static int[] swap(int[] array, int index) {
+	public static int[] swap(int[] array, int index)
+	{
 		// Assign names to indices for clarity
 		int currIndex = index;
 		int nextIndex = index + 1;
@@ -139,12 +150,15 @@ public class M2ArrayChallenge
 		return array;
 	}
 
-	public static int[] bubbleUp(int[] array) {
-		for (int i = 0; i < array.length - 1; i++) {
+	public static int[] bubbleUp(int[] array)
+	{
+		for (int i = 0; i < array.length - 1; i++)
+		{
 			int curr = array[i];
 			int next = array[i + 1];
 
-			if (curr < next) {
+			if (curr < next)
+			{
 				continue;
 			}
 
@@ -154,8 +168,10 @@ public class M2ArrayChallenge
 		return array;
 	}
 
-	public static int[] bubbleSort(int[] array) {
-		while (!inOrder(array)) {
+	public static int[] bubbleSort(int[] array)
+	{
+		while (!inOrder(array))
+		{
 			array = bubbleUp(array);
 		}
 
@@ -171,20 +187,25 @@ public class M2ArrayChallenge
 	 *
 	 * @return a new copy of the array
 	 */
-	public static char[] copy(char[] array) {
+	public static char[] copy(char[] array)
+	{
 		return array.clone();
 	}
 
-	public static boolean arrayElementsEqual(char[] array1, char[] array2) {
-		if (array1.length != array2.length) {
+	public static boolean arrayElementsEqual(char[] array1, char[] array2)
+	{
+		if (array1.length != array2.length)
+		{
 			return false;
 		}
 
 		// could be either one, but we have to get the length somehow
 		int length = array1.length;
 
-		for (int i = 0; i < length; i++) {
-			if (array1[i] != array2[i]) {
+		for (int i = 0; i < length; i++)
+		{
+			if (array1[i] != array2[i])
+			{
 				return false;
 			}
 		}
@@ -192,46 +213,55 @@ public class M2ArrayChallenge
 		return true;
 	}
 
-	public static char[] backwards(char[] array) {
+	public static char[] backwards(char[] array)
+	{
 		char[] new_array = new char[array.length];
 
 		int lastIndex = array.length - 1;
 
-		for (int i = 0; i <= lastIndex; i++) {
+		for (int i = 0; i <= lastIndex; i++)
+		{
 			new_array[i] = array[lastIndex - i];
 		}
 
 		return new_array;
 	}
 
-	public static boolean isPalindrome(char[] array) {
+	public static boolean isPalindrome(char[] array)
+	{
 		return arrayElementsEqual(array, backwards(array));
 	}
 
-	public static int addRow(int[][] array, int row) {
+	public static int addRow(int[][] array, int row)
+	{
 		int sum = 0;
 
-		for (int item : array[row]) {
+		for (int item : array[row])
+		{
 			sum += item;
 		}
 
 		return sum;
 	}
 
-	public static int addColumn(int[][] array, int col) {
+	public static int addColumn(int[][] array, int col)
+	{
 		int sum = 0;
 
-		for (int[] row : array) {
+		for (int[] row : array)
+		{
 			sum += row[col];
 		}
 
 		return sum;
 	}
 
-	public static int addLeftToRightDiagonal(int[][] array) {
+	public static int addLeftToRightDiagonal(int[][] array)
+	{
 		int sum = 0;
 
-		for (int i = 0; i < array.length; i++) {
+		for (int i = 0; i < array.length; i++)
+		{
 			assert array[i].length == array.length : "Array is not square";
 
 			sum += array[i][i];
@@ -240,11 +270,13 @@ public class M2ArrayChallenge
 		return sum;
 	}
 
-	public static int addRightToLeftDiagonal(int[][] array) {
+	public static int addRightToLeftDiagonal(int[][] array)
+	{
 		int sum = 0;
 		int lastIndex = array.length - 1;
 
-		for (int i = 0; i <= lastIndex; i++) {
+		for (int i = 0; i <= lastIndex; i++)
+		{
 			assert array[i].length == array.length : "Array is not square";
 
 			sum += array[lastIndex - i][i];
@@ -253,10 +285,12 @@ public class M2ArrayChallenge
 		return sum;
 	}
 
-	public static int addLastRowElement(int[][] array) {
+	public static int addLastRowElement(int[][] array)
+	{
 		int sum = 0;
 
-		for (int[] row : array) {
+		for (int[] row : array)
+		{
 			sum += row[row.length - 1];
 		}
 
