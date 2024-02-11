@@ -81,16 +81,33 @@ public class M2ArrayChallenge
 		return count;
 	}
 
+	/**
+	 * Determines whether an integer array is in order from least to greatest
+	 *
+	 * @param array array to check
+	 *
+	 * @return `true` if the array is in order, `false` otherwise
+	 */
 	public static boolean inOrder(int[] array) {
-		for (int i = 1; i < array.length; i++) {
-			int last = array[i - 1];
-			int curr = array[i];
+		// Loop for all indices except last
+		for (int i = 0; i < array.length - 1; i++) {
+			// Get current & next value
+			int currValue = array[i];
+			int nextValue = array[i + 1];
 
-			if (last > curr) {
+			// No value shall be greater than its succcessor
+			// If current value is less than the next value ...
+			if (currValue > nextValue) {
+				// Indicate that the array is not in order
 				return false;
 			}
+
+			// Continue checking
 		}
 
+		// If we made this far, then all of the items in the loop
+		// are less than its successors, therefore the array
+		// is in order
 		return true;
 	}
 
