@@ -56,15 +56,28 @@ public class M2ArrayChallenge
 		return data[row][column];
 	}
 
+	/**
+	 * Count the occurances of a specific character in an array
+	 *
+	 * @param array array of chars to search
+	 * @param value value to search for
+	 *
+	 * @return the occurances of `value` in `array`
+	 */
 	public static int countValues(char[] array, char value) {
+		// The amount of times `value` is found in `array`
 		int count = 0;
 
+		// For every character in `array`
 		for (char ch : array) {
+			// If the character matches `value` ...
 			if (ch == value) {
+				// Increment our occurance counter (`count`)
 				count++;
 			}
 		}
 
+		// Return our count
 		return count;
 	}
 
