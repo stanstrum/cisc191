@@ -47,8 +47,31 @@ public class Logic
 		}
 	}
 
-	public static void negative(Picture p) {
-		throw new UnsupportedOperationException("Not implemented");
+	/**
+	 * The highest value a color channel may hold.
+	 *
+	 * @see {@link Pixel#getRed} - Returns the amount of red from 0 for none to 255 for max
+	 */
+	private static final int MAX_CHANNEL_VALUE = 255;
+
+	/**
+	 * Applies a negative filter to the provided picture
+	 *
+	 * @param picture picture to apply filter to
+	 */
+	public static void negative(Picture picture) {
+		// Iterate through all pixesl in picture
+		for (Pixel pixel : picture.getPixels()) {
+			// Get RGB values
+			int red = pixel.getRed();
+			int green = pixel.getGreen();
+			int blue = pixel.getBlue();
+
+			// Invert each channel's value -- range is from 0 - 255, now it's 255 - 0
+			pixel.setRed(MAX_CHANNEL_VALUE - red);
+			pixel.setGreen(MAX_CHANNEL_VALUE - green);
+			pixel.setBlue(MAX_CHANNEL_VALUE - blue);
+		}
 	}
 
 	public static void makeSunset(Picture arg0, double arg1, double arg2) {
