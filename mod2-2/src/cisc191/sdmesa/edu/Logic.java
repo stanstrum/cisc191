@@ -74,8 +74,31 @@ public class Logic
 		}
 	}
 
-	public static void makeSunset(Picture arg0, double arg1, double arg2) {
-		throw new UnsupportedOperationException("Not implemented");
+	/**
+	 * Applies a "sunset" filter to an image by applying color ratios to the RGB channels
+	 *
+	 * @param picture picture to apply filter to
+	 * @param redIntensity intensity multiplier of the red channel
+	 * @param greenBlueReduction intensity multiplier of the green and blue channels
+	 */
+	public static void makeSunset(Picture picture, double redIntensity, double greenBlueReduction) {
+		// Iterate through all pixesl in picture
+		for (Pixel pixel : picture.getPixels()) {
+			// Get RGB values
+			int oldRed = pixel.getRed();
+			int oldGreen = pixel.getGreen();
+			int oldBlue = pixel.getBlue();
+
+			// Apply intensity ratios
+			double newRed = (double)oldRed * redIntensity;
+			double newGreen = (double)oldGreen * greenBlueReduction;
+			double newBlue = (double)oldBlue * greenBlueReduction;
+
+			// Replace old channel values with newly-computed ones
+			pixel.setRed((int)newRed);
+			pixel.setGreen((int)newGreen);
+			pixel.setBlue((int)newBlue);
+		}
 	}
 
 	public static void mirrorHorizontal(Picture p) {
