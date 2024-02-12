@@ -3,9 +3,9 @@ package cisc191.sdmesa.edu;
 import java.awt.Color;
 /**
  * Lead Author(s):
- * 
- * @author 
- * 
+ *
+ * @author
+ *
  */
 public class Logic
 {
@@ -13,7 +13,7 @@ public class Logic
 	/**
 	 * Alters the picture so that each pixel's blue channel has been zeroed out. All
 	 * other channels remain the same
-	 * 
+	 *
 	 * @param picture the image to be altered
 	 */
 	public static void zeroBlue(DigitalPicture picture)
@@ -30,16 +30,39 @@ public class Logic
 
 	}
 
+	public static void blackAndWhite(Picture p) {
+		throw new UnsupportedOperationException("Not implemented");
+	}
+
+	public static void negative(Picture p) {
+		throw new UnsupportedOperationException("Not implemented");
+	}
+
+	public static void makeSunset(Picture arg0, double arg1, double arg2) {
+		throw new UnsupportedOperationException("Not implemented");
+	}
+
+	public static void mirrorHorizontal(Picture p) {
+		throw new UnsupportedOperationException("Not implemented");
+	}
+
+	public static void mirrorVertical(Picture p) {
+		throw new UnsupportedOperationException("Not implemented");
+	}
+
+	public static void blur(Picture p) {
+		throw new UnsupportedOperationException("Not implemented");
+	}
 
 //	/**
 //	 * Alters the picture so that is is black and white by setting each pixels color value to be the average
-//	 * of the pixels red, green, and blue channel. 
+//	 * of the pixels red, green, and blue channel.
 //	 * @param picture,  the image to be altered
 //	 */
 //	public static void ????(??? ???) {
-//		
-//		
-//		
+//
+//
+//
 //	}
 
 }
