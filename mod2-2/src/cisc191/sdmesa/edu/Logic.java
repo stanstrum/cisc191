@@ -1,6 +1,5 @@
 package cisc191.sdmesa.edu;
 
-import java.awt.Color;
 /**
  * Lead Author(s):
  *
@@ -30,8 +29,22 @@ public class Logic
 
 	}
 
-	public static void blackAndWhite(Picture p) {
-		throw new UnsupportedOperationException("Not implemented");
+	/**
+	 * Applies a black-and-white filter to the provided picture
+	 *
+	 * @param picture picture to apply filter to
+	 */
+	public static void blackAndWhite(Picture picture) {
+		// Iterate through all pixels in picture
+		for (Pixel pixel : picture.getPixels()) {
+			// Downcast average from double to integer
+			int average = (int)pixel.getAverage();
+
+			// Set each channel's values to the average
+			pixel.setRed(average);
+			pixel.setGreen(average);
+			pixel.setBlue(average);
+		}
 	}
 
 	public static void negative(Picture p) {
