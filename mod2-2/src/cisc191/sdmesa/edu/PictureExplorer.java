@@ -219,11 +219,7 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
 		{
 			public void actionPerformed(ActionEvent evt)
 			{
-				/*
-				 * Uncomment the following to connect the black and white button in the GUI to
-				 * your provided solution.
-				 */
-				// Logic.blackAndWhite(picture);
+				Logic.blackAndWhite(picture);
 				repaint();
 			}
 		});
@@ -234,11 +230,7 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
 		{
 			public void actionPerformed(ActionEvent evt)
 			{
-				/*
-				 * Uncomment the following to connect the negative button in the GUI to your
-				 * provided solution.
-				 */
-				// Logic.negative(picture);
+				Logic.negative(picture);
 				repaint();
 			}
 		});
@@ -257,7 +249,7 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
 				{
 					double r = Double.valueOf(red);
 					double gb = Double.valueOf(greenBlue);
-					// Logic.makeSunset(picture, r, gb);
+					Logic.makeSunset(picture, r, gb);
 				} catch (Exception e)
 				{
 					System.out.println("You entered invalid values for the makeSunset filter");
@@ -272,11 +264,7 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
 		{
 			public void actionPerformed(ActionEvent evt)
 			{
-				/*
-				 * Uncomment the following to connect the mirrorVertical button in the GUI to
-				 * your provided solution.
-				 */
-				// Logic.mirrorVertical(picture);
+				Logic.mirrorVertical(picture);
 				repaint();
 			}
 		});
@@ -286,11 +274,7 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
 		{
 			public void actionPerformed(ActionEvent evt)
 			{
-				/*
-				 * Uncomment the following to connect the mirrorHorizontal button in the GUI to
-				 * your provided solution.
-				 */
-				// Logic.mirrorHorizontal(picture);
+				Logic.mirrorHorizontal(picture);
 				repaint();
 			}
 		});
@@ -301,11 +285,7 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
 		{
 			public void actionPerformed(ActionEvent evt)
 			{
-				/*
-				 * Uncomment the following to connect the blur button in the GUI to your
-				 * provided solution.
-				 */
-				// Logic.blur(picture);
+				Logic.blur(picture);
 				repaint();
 			}
 		});
