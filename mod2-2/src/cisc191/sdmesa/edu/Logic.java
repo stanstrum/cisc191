@@ -34,7 +34,7 @@ public class Logic
 	 *
 	 * @param picture picture to apply filter to
 	 */
-	public static void blackAndWhite(Picture picture) {
+	public static void blackAndWhite(DigitalPicture picture) {
 		// Iterate through all pixels in picture
 		for (Pixel pixel : picture.getPixels()) {
 			// Downcast average from double to integer
@@ -59,7 +59,7 @@ public class Logic
 	 *
 	 * @param picture picture to apply filter to
 	 */
-	public static void negative(Picture picture) {
+	public static void negative(DigitalPicture picture) {
 		// Iterate through all pixesl in picture
 		for (Pixel pixel : picture.getPixels()) {
 			// Get RGB values
@@ -81,7 +81,7 @@ public class Logic
 	 * @param redIntensity intensity multiplier of the red channel
 	 * @param greenBlueReduction intensity multiplier of the green and blue channels
 	 */
-	public static void makeSunset(Picture picture, double redIntensity, double greenBlueReduction) {
+	public static void makeSunset(DigitalPicture picture, double redIntensity, double greenBlueReduction) {
 		// Iterate through all pixesl in picture
 		for (Pixel pixel : picture.getPixels()) {
 			// Get RGB values
@@ -101,15 +101,15 @@ public class Logic
 		}
 	}
 
-	public static void mirrorHorizontal(Picture p) {
 		throw new UnsupportedOperationException("Not implemented");
+	public static void mirrorHorizontal(DigitalPicture picture) {
 	}
 
-	public static void mirrorVertical(Picture p) {
 		throw new UnsupportedOperationException("Not implemented");
+	public static void mirrorVertical(DigitalPicture picture) {
 	}
 
-	public static void blur(Picture p) {
+	public static void blur(DigitalPicture picture) {
 		throw new UnsupportedOperationException("Not implemented");
 	}
 
