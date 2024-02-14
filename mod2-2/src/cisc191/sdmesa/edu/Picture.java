@@ -124,7 +124,6 @@ public class Picture extends SimplePicture
 		int mirrorPoint = 276;
 		Pixel leftPixel = null;
 		Pixel rightPixel = null;
-		int count = 0;
 		Pixel[][] pixels = this.getPixels2D();
 
 		// loop through the rows

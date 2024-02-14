@@ -86,9 +86,6 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
 	/** The picture being explored */
 	private DigitalPicture picture;
 
-	/** The image icon used to display the picture */
-	private ImageIcon scrollImageIcon;
-
 	/** The image display */
 	private ImageDisplay imageDisplay;
 
@@ -201,7 +198,6 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
 		imageDisplay.setToolTipText("Click a mouse button on a pixel to see the pixel information");
 		scrollPane.setViewportView(imageDisplay);
 		pictureFrame.getContentPane().add(scrollPane, BorderLayout.CENTER);
-		BufferedImage og = picture.getBufferedImage();
 
 		CustomButton zeroBlue = new CustomButton("Zero Blue");
 		// handle previous row button press
@@ -308,24 +304,6 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
 
 		pictureFrame.getContentPane().add(filters, BorderLayout.EAST);
 
-	}
-
-	private void blackAndWhite()
-	{
-		System.out.println("Inside Method");
-		Pixel[][] pixel2D = picture.getPixels2D();
-		for (int r = 0; r < pixel2D.length; r++)
-		{
-			for (int c = 0; c < pixel2D[r].length; c++)
-			{
-
-				int avg = (pixel2D[r][c].getRed() + pixel2D[r][c].getGreen() + pixel2D[r][c].getBlue()) / 3;
-				pixel2D[r][c].setGreen(avg);
-				pixel2D[r][c].setBlue(avg);
-				pixel2D[r][c].setRed(avg);
-			}
-		}
-		repaint();
 	}
 
 	/**
@@ -583,12 +561,8 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
 			// get the rectangle that defines the current view
 			JViewport viewport = scrollPane.getViewport();
 			Rectangle rect = viewport.getViewRect();
-			int rectMinX = (int) rect.getX();
 			int rectWidth = (int) rect.getWidth();
-			int rectMaxX = rectMinX + rectWidth - 1;
-			int rectMinY = (int) rect.getY();
 			int rectHeight = (int) rect.getHeight();
-			int rectMaxY = rectMinY + rectHeight - 1;
 
 			// get the maximum possible x and y index
 			int macolIndexX = (int) (picture.getWidth() * zoomFactor) - rectWidth - 1;
