@@ -101,12 +101,38 @@ public class Logic
 		}
 	}
 
-		throw new UnsupportedOperationException("Not implemented");
 	public static void mirrorHorizontal(DigitalPicture picture) {
+		int lastCol = picture.getWidth() - 1;
+		int middleCol = lastCol / 2;
+		
+		for (int row = 0; row < picture.getHeight(); row++) {
+			for (int col = 0; col <= middleCol; col++) {
+				int latterCol = lastCol - col;
+				
+				int formerBasicPixel = picture.getBasicPixel(col, row);
+				int latterBasicPixel = picture.getBasicPixel(latterCol, row);
+
+				picture.setBasicPixel(latterCol, row, formerBasicPixel);
+				picture.setBasicPixel(col, row, latterBasicPixel);
+			}
+		}
 	}
 
-		throw new UnsupportedOperationException("Not implemented");
 	public static void mirrorVertical(DigitalPicture picture) {
+		int lastRow = picture.getHeight() - 1;
+		int middleRow = lastRow / 2;
+
+		for (int col = 0; col < picture.getWidth(); col++) {
+			for (int row = 0; row <= middleRow; row++) {
+				int latterRow = lastRow - row;
+
+				int formerBasicPixel = picture.getBasicPixel(col, row);
+				int latterBasicPixel = picture.getBasicPixel(col, latterRow);
+
+				picture.setBasicPixel(col, row, latterBasicPixel);
+				picture.setBasicPixel(col, latterRow, formerBasicPixel);
+			}
+		}
 	}
 
 	public static void blur(DigitalPicture picture) {
