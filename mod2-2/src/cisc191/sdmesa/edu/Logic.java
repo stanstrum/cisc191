@@ -104,11 +104,11 @@ public class Logic
 	public static void mirrorHorizontal(DigitalPicture picture) {
 		int lastCol = picture.getWidth() - 1;
 		int middleCol = lastCol / 2;
-		
+
 		for (int row = 0; row < picture.getHeight(); row++) {
 			for (int col = 0; col <= middleCol; col++) {
 				int latterCol = lastCol - col;
-				
+
 				int formerBasicPixel = picture.getBasicPixel(col, row);
 				int latterBasicPixel = picture.getBasicPixel(latterCol, row);
 
