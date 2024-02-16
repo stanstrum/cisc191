@@ -8,7 +8,7 @@ import java.net.*;
 /**
  * A class to make working with a file chooser easier for students. It uses a
  * JFileChooser to let the user pick a file and returns the chosen file name.
- * 
+ *
  * @author Barb Ericson ericson@cc.gatech.edu
  */
 public class FileChooser
@@ -18,7 +18,7 @@ public class FileChooser
 
 	/**
 	 * Method to get the full path for the passed file name
-	 * 
+	 *
 	 * @param fileName the name of a file
 	 * @return the full path for the file
 	 */
@@ -34,7 +34,7 @@ public class FileChooser
 
 	/**
 	 * Method to pick an item using the file chooser
-	 * 
+	 *
 	 * @param fileChooser the file Chooser to use
 	 * @return the path name
 	 */
@@ -61,7 +61,7 @@ public class FileChooser
 	/**
 	 * Method to let the user pick a file and return the full file name as a string.
 	 * If the user didn't pick a file then the file name will be null.
-	 * 
+	 *
 	 * @return the full file name of the picked file or null
 	 */
 	public static String pickAFile()
@@ -99,9 +99,10 @@ public class FileChooser
 
 	/**
 	 * Method to get the directory for the media
-	 * 
+	 *
 	 * @return the media directory
 	 */
+	@SuppressWarnings("deprecation")
 	public static String getMediaDirectory()
 	{
 		String directory = null;
