@@ -13,7 +13,7 @@ import java.awt.geom.*;
  * height. A simple picture uses a BufferedImage to hold the pixels. You can
  * show a simple picture in a PictureFrame (a JFrame). You can also explore a
  * simple picture.
- * 
+ *
  * @author Barb Ericson ericson@cc.gatech.edu
  */
 public class SimplePicture implements DigitalPicture
@@ -63,7 +63,7 @@ public class SimplePicture implements DigitalPicture
 
 	/**
 	 * A Constructor that takes a file name and uses the file to create a picture
-	 * 
+	 *
 	 * @param fileName the file name to use in creating the picture
 	 */
 	public SimplePicture(String fileName)
@@ -78,7 +78,7 @@ public class SimplePicture implements DigitalPicture
 	 * A constructor that takes the width and height desired for a picture and
 	 * creates a buffered image of that size. This constructor doesn't show the
 	 * picture. The pixels will all be white.
-	 * 
+	 *
 	 * @param width  the desired width
 	 * @param height the desired height
 	 */
@@ -95,7 +95,7 @@ public class SimplePicture implements DigitalPicture
 	 * A constructor that takes the width and height desired for a picture and
 	 * creates a buffered image of that size. It also takes the color to use for the
 	 * background of the picture.
-	 * 
+	 *
 	 * @param width    the desired width
 	 * @param height   the desired height
 	 * @param theColor the background color for the picture
@@ -108,7 +108,7 @@ public class SimplePicture implements DigitalPicture
 
 	/**
 	 * A Constructor that takes a picture to copy information from
-	 * 
+	 *
 	 * @param copyPicture the picture to copy from
 	 */
 	public SimplePicture(SimplePicture copyPicture)
@@ -130,7 +130,7 @@ public class SimplePicture implements DigitalPicture
 
 	/**
 	 * A constructor that takes a buffered image
-	 * 
+	 *
 	 * @param image the buffered image
 	 */
 	public SimplePicture(BufferedImage image)
@@ -145,7 +145,7 @@ public class SimplePicture implements DigitalPicture
 
 	/**
 	 * Method to get the extension for this picture
-	 * 
+	 *
 	 * @return the extendsion (jpg, bmp, giff, etc)
 	 */
 	public String getExtension()
@@ -156,7 +156,7 @@ public class SimplePicture implements DigitalPicture
 	/**
 	 * Method that will copy all of the passed source picture into the current
 	 * picture object
-	 * 
+	 *
 	 * @param sourcePicture the picture object to copy
 	 */
 	public void copyPicture(SimplePicture sourcePicture)
@@ -182,7 +182,7 @@ public class SimplePicture implements DigitalPicture
 
 	/**
 	 * Method to set the color in the picture to the passed color
-	 * 
+	 *
 	 * @param color the color to set to
 	 */
 	public void setAllPixelsToAColor(Color color)
@@ -200,7 +200,7 @@ public class SimplePicture implements DigitalPicture
 
 	/**
 	 * Method to get the buffered image
-	 * 
+	 *
 	 * @return the buffered image
 	 */
 	public BufferedImage getBufferedImage()
@@ -210,7 +210,7 @@ public class SimplePicture implements DigitalPicture
 
 	/**
 	 * Method to get a graphics object for this picture to use to draw on
-	 * 
+	 *
 	 * @return a graphics object to use for drawing
 	 */
 	public Graphics getGraphics()
@@ -229,7 +229,7 @@ public class SimplePicture implements DigitalPicture
 
 	/**
 	 * Method to get the file name associated with the picture
-	 * 
+	 *
 	 * @return the file name associated with the picture
 	 */
 	public String getFileName()
@@ -239,7 +239,7 @@ public class SimplePicture implements DigitalPicture
 
 	/**
 	 * Method to set the file name
-	 * 
+	 *
 	 * @param name the full pathname of the file
 	 */
 	public void setFileName(String name)
@@ -249,7 +249,7 @@ public class SimplePicture implements DigitalPicture
 
 	/**
 	 * Method to get the title of the picture
-	 * 
+	 *
 	 * @return the title of the picture
 	 */
 	public String getTitle()
@@ -259,7 +259,7 @@ public class SimplePicture implements DigitalPicture
 
 	/**
 	 * Method to set the title for the picture
-	 * 
+	 *
 	 * @param title the title to use for the picture
 	 */
 	public void setTitle(String title)
@@ -271,7 +271,7 @@ public class SimplePicture implements DigitalPicture
 
 	/**
 	 * Method to get the width of the picture in pixels
-	 * 
+	 *
 	 * @return the width of the picture in pixels
 	 */
 	public int getWidth()
@@ -281,7 +281,7 @@ public class SimplePicture implements DigitalPicture
 
 	/**
 	 * Method to get the height of the picture in pixels
-	 * 
+	 *
 	 * @return the height of the picture in pixels
 	 */
 	public int getHeight()
@@ -291,7 +291,7 @@ public class SimplePicture implements DigitalPicture
 
 	/**
 	 * Method to get the picture frame for the picture
-	 * 
+	 *
 	 * @return the picture frame associated with this picture (it may be null)
 	 */
 	public PictureFrame getPictureFrame()
@@ -301,7 +301,7 @@ public class SimplePicture implements DigitalPicture
 
 	/**
 	 * Method to set the picture frame for this picture
-	 * 
+	 *
 	 * @param pictureFrame the picture frame to use
 	 */
 	public void setPictureFrame(PictureFrame pictureFrame)
@@ -312,7 +312,7 @@ public class SimplePicture implements DigitalPicture
 
 	/**
 	 * Method to get an image from the picture
-	 * 
+	 *
 	 * @return the buffered image since it is an image
 	 */
 	public Image getImage()
@@ -322,7 +322,7 @@ public class SimplePicture implements DigitalPicture
 
 	/**
 	 * Method to return the pixel value as an int for the given x and y location
-	 * 
+	 *
 	 * @param x the x coordinate of the pixel
 	 * @param y the y coordinate of the pixel
 	 * @return the pixel value as an integer (alpha, red, green, blue)
@@ -334,7 +334,7 @@ public class SimplePicture implements DigitalPicture
 
 	/**
 	 * Method to set the value of a pixel in the picture from an int
-	 * 
+	 *
 	 * @param x   the x coordinate of the pixel
 	 * @param y   the y coordinate of the pixel
 	 * @param rgb the new rgb value of the pixel (alpha, red, green, blue)
@@ -346,7 +346,7 @@ public class SimplePicture implements DigitalPicture
 
 	/**
 	 * Method to get a pixel object for the given x and y location
-	 * 
+	 *
 	 * @param x the x location of the pixel in the picture
 	 * @param y the y location of the pixel in the picture
 	 * @return a Pixel object for this location
@@ -360,7 +360,7 @@ public class SimplePicture implements DigitalPicture
 
 	/**
 	 * Method to get a one-dimensional array of Pixels for this simple picture
-	 * 
+	 *
 	 * @return a one-dimensional array of Pixel objects starting with y=0 to
 	 *         y=height-1 and x=0 to x=width-1.
 	 */
@@ -380,7 +380,7 @@ public class SimplePicture implements DigitalPicture
 
 	/**
 	 * Method to get a two-dimensional array of Pixels for this simple picture
-	 * 
+	 *
 	 * @return a two-dimensional array of Pixel objects in row-major order.
 	 */
 	public Pixel[][] getPixels2D()
@@ -399,7 +399,7 @@ public class SimplePicture implements DigitalPicture
 
 	/**
 	 * Method to load the buffered image with the passed image
-	 * 
+	 *
 	 * @param image the image to use
 	 */
 	public void load(Image image)
@@ -439,7 +439,7 @@ public class SimplePicture implements DigitalPicture
 
 	/**
 	 * Method to make this picture visible or not
-	 * 
+	 *
 	 * @param flag true if you want it visible else false
 	 */
 	public void setVisible(boolean flag)
@@ -477,7 +477,7 @@ public class SimplePicture implements DigitalPicture
 
 	/**
 	 * Method to load the picture from the passed file name
-	 * 
+	 *
 	 * @param fileName the file name to use to load the picture from
 	 * @throws IOException if the picture isn't found
 	 */
@@ -513,7 +513,7 @@ public class SimplePicture implements DigitalPicture
 	/**
 	 * Method to read the contents of the picture from a filename without throwing
 	 * errors
-	 * 
+	 *
 	 * @param fileName the name of the file to write the picture to
 	 * @return true if success else false
 	 */
@@ -537,7 +537,7 @@ public class SimplePicture implements DigitalPicture
 	/**
 	 * Method to load the picture from the passed file name this just calls
 	 * load(fileName) and is for name compatibility
-	 * 
+	 *
 	 * @param fileName the file name to use to load the picture from
 	 * @return true if success else false
 	 */
@@ -548,7 +548,7 @@ public class SimplePicture implements DigitalPicture
 
 	/**
 	 * Method to draw a message as a string on the buffered image
-	 * 
+	 *
 	 * @param message the message to draw on the buffered image
 	 * @param xPos    the leftmost point of the string in x
 	 * @param yPos    the bottom of the string in y
@@ -571,7 +571,7 @@ public class SimplePicture implements DigitalPicture
 
 	/**
 	 * Method to draw a string at the given location on the picture
-	 * 
+	 *
 	 * @param text the text to draw
 	 * @param xPos the left x for the text
 	 * @param yPos the top y for the text
@@ -583,7 +583,7 @@ public class SimplePicture implements DigitalPicture
 
 	/**
 	 * Method to create a new picture by scaling the current picture by the given
-	 * 
+	 *
 	 * @param rFactor the amount to scale in the height (rows)
 	 * @param cFactor the amount to scale in the width (columns)
 	 * @return the resulting picture
@@ -610,7 +610,7 @@ public class SimplePicture implements DigitalPicture
 	/**
 	 * Method to create a new picture of the passed width. The aspect ratio of the
 	 * width and height will stay the same.
-	 * 
+	 *
 	 * @param width the desired width
 	 * @return the resulting picture
 	 */
@@ -625,7 +625,7 @@ public class SimplePicture implements DigitalPicture
 	/**
 	 * Method to create a new picture of the passed height. The aspect ratio of the
 	 * width and height will stay the same.
-	 * 
+	 *
 	 * @param height the desired height
 	 * @return the resulting picture
 	 */
@@ -639,7 +639,7 @@ public class SimplePicture implements DigitalPicture
 
 	/**
 	 * Method to load a picture from a file name and show it in a picture frame
-	 * 
+	 *
 	 * @param fileName the file name to load the picture from
 	 * @return true if success else false
 	 */
@@ -658,7 +658,7 @@ public class SimplePicture implements DigitalPicture
 
 	/**
 	 * Method to write the contents of the picture to a file with the passed name
-	 * 
+	 *
 	 * @param fileName the name of the file to write the picture to
 	 */
 	public void writeOrFail(String fileName) throws IOException
@@ -696,7 +696,7 @@ public class SimplePicture implements DigitalPicture
 	/**
 	 * Method to write the contents of the picture to a file with the passed name
 	 * without throwing errors
-	 * 
+	 *
 	 * @param fileName the name of the file to write the picture to
 	 * @return true if success else false
 	 */
@@ -717,7 +717,7 @@ public class SimplePicture implements DigitalPicture
 
 	/**
 	 * Method to get the directory for the media
-	 * 
+	 *
 	 * @param fileName the base file name to use
 	 * @return the full path name by appending the file name to the media directory
 	 */
@@ -729,7 +729,7 @@ public class SimplePicture implements DigitalPicture
 	/**
 	 * Method to get the coordinates of the enclosing rectangle after this
 	 * transformation is applied to the current picture
-	 * 
+	 *
 	 * @return the enclosing rectangle
 	 */
 	public Rectangle2D getTransformEnclosingRect(AffineTransform trans)
@@ -776,7 +776,7 @@ public class SimplePicture implements DigitalPicture
 	/**
 	 * Method to get the coordinates of the enclosing rectangle after this
 	 * transformation is applied to the current picture
-	 * 
+	 *
 	 * @return the enclosing rectangle
 	 */
 	public Rectangle2D getTranslationEnclosingRect(AffineTransform trans)
@@ -786,7 +786,7 @@ public class SimplePicture implements DigitalPicture
 
 	/**
 	 * Method to return a string with information about this picture
-	 * 
+	 *
 	 * @return a string with information about the picture
 	 */
 	public String toString()

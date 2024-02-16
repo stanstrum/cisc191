@@ -8,7 +8,7 @@ import java.awt.Color;
  * location in a picture. A pixel knows how to get and set the red, green, blue,
  * and alpha values in the picture. A pixel also knows how to get and set the
  * color using a Color object.
- * 
+ *
  * @author Barb Ericson ericson@cc.gatech.edu
  */
 public class Pixel
@@ -30,7 +30,7 @@ public class Pixel
 	/**
 	 * A constructor that takes the x and y location for the pixel and the picture
 	 * the pixel is coming from
-	 * 
+	 *
 	 * @param picture the picture that the pixel is in
 	 * @param x       the x location of the pixel in the picture
 	 * @param y       the y location of the pixel in the picture
@@ -52,7 +52,7 @@ public class Pixel
 
 	/**
 	 * Method to get the x location of this pixel.
-	 * 
+	 *
 	 * @return the x location of the pixel in the picture
 	 */
 	public int getX()
@@ -62,7 +62,7 @@ public class Pixel
 
 	/**
 	 * Method to get the y location of this pixel.
-	 * 
+	 *
 	 * @return the y location of the pixel in the picture
 	 */
 	public int getY()
@@ -72,7 +72,7 @@ public class Pixel
 
 	/**
 	 * Method to get the row (y value)
-	 * 
+	 *
 	 * @return the row (y value) of the pixel in the picture
 	 */
 	public int getRow()
@@ -82,7 +82,7 @@ public class Pixel
 
 	/**
 	 * Method to get the column (x value)
-	 * 
+	 *
 	 * @return the column (x value) of the pixel
 	 */
 	public int getCol()
@@ -93,7 +93,7 @@ public class Pixel
 	/**
 	 * Method to get the amount of alpha (transparency) at this pixel. It will be
 	 * from 0-255.
-	 * 
+	 *
 	 * @return the amount of alpha (transparency)
 	 */
 	public int getAlpha()
@@ -116,7 +116,7 @@ public class Pixel
 	/**
 	 * Method to get the amount of red at this pixel. It will be from 0-255 with 0
 	 * being no red and 255 being as much red as you can have.
-	 * 
+	 *
 	 * @return the amount of red from 0 for none to 255 for max
 	 */
 	public int getRed()
@@ -138,7 +138,7 @@ public class Pixel
 
 	/**
 	 * Method to get the red value from a pixel represented as an int
-	 * 
+	 *
 	 * @param value the color value as an int
 	 * @return the amount of red
 	 */
@@ -151,7 +151,7 @@ public class Pixel
 	/**
 	 * Method to get the amount of green at this pixel. It will be from 0-255 with 0
 	 * being no green and 255 being as much green as you can have.
-	 * 
+	 *
 	 * @return the amount of green from 0 for none to 255 for max
 	 */
 	public int getGreen()
@@ -171,7 +171,7 @@ public class Pixel
 
 	/**
 	 * Method to get the green value from a pixel represented as an int
-	 * 
+	 *
 	 * @param value the color value as an int
 	 * @return the amount of green
 	 */
@@ -184,7 +184,7 @@ public class Pixel
 	/**
 	 * Method to get the amount of blue at this pixel. It will be from 0-255 with 0
 	 * being no blue and 255 being as much blue as you can have.
-	 * 
+	 *
 	 * @return the amount of blue from 0 for none to 255 for max
 	 */
 	public int getBlue()
@@ -204,7 +204,7 @@ public class Pixel
 
 	/**
 	 * Method to get the blue value from a pixel represented as an int
-	 * 
+	 *
 	 * @param value the color value as an int
 	 * @return the amount of blue
 	 */
@@ -216,7 +216,7 @@ public class Pixel
 
 	/**
 	 * Method to get a color object that represents the color at this pixel.
-	 * 
+	 *
 	 * @return a color object that represents the pixel color
 	 */
 	public Color getColor()
@@ -243,7 +243,7 @@ public class Pixel
 
 	/**
 	 * Method to set the pixel color to the passed in color object.
-	 * 
+	 *
 	 * @param newColor the new color to use
 	 */
 	public void setColor(Color newColor)
@@ -259,7 +259,7 @@ public class Pixel
 
 	/**
 	 * Method to update the picture based on the passed color values for this pixel
-	 * 
+	 *
 	 * @param alpha the alpha (transparency) at this pixel
 	 * @param red   the red value for the color at this pixel
 	 * @param green the green value for the color at this pixel
@@ -276,7 +276,7 @@ public class Pixel
 
 	/**
 	 * Method to correct a color value to be within 0 to 255
-	 * 
+	 *
 	 * @param the value to use
 	 * @return a value within 0 to 255
 	 */
@@ -291,7 +291,7 @@ public class Pixel
 
 	/**
 	 * Method to set the red to a new red value
-	 * 
+	 *
 	 * @param value the new value to use
 	 */
 	public void setRed(int value)
@@ -305,7 +305,7 @@ public class Pixel
 
 	/**
 	 * Method to set the green to a new green value
-	 * 
+	 *
 	 * @param value the value to use
 	 */
 	public void setGreen(int value)
@@ -319,7 +319,7 @@ public class Pixel
 
 	/**
 	 * Method to set the blue to a new blue value
-	 * 
+	 *
 	 * @param value the new value to use
 	 */
 	public void setBlue(int value)
@@ -333,7 +333,7 @@ public class Pixel
 
 	/**
 	 * Method to set the alpha (transparency) to a new alpha value
-	 * 
+	 *
 	 * @param value the new value to use
 	 */
 	public void setAlpha(int value)
@@ -347,7 +347,7 @@ public class Pixel
 
 	/**
 	 * Method to get the distance between this pixel's color and the passed color
-	 * 
+	 *
 	 * @param testColor the color to compare to
 	 * @return the distance between this pixel's color and the passed color
 	 */
@@ -363,7 +363,7 @@ public class Pixel
 
 	/**
 	 * Method to compute the color distances between two color objects
-	 * 
+	 *
 	 * @param color1 a color object
 	 * @param color2 a color object
 	 * @return the distance between the two colors
@@ -380,7 +380,7 @@ public class Pixel
 
 	/**
 	 * Method to get the average of the colors of this pixel
-	 * 
+	 *
 	 * @return the average of the red, green, and blue values
 	 */
 	public double getAverage()
@@ -391,7 +391,7 @@ public class Pixel
 
 	/**
 	 * Method to return a string with information about this pixel
-	 * 
+	 *
 	 * @return a string with information about this pixel
 	 */
 	public String toString()
