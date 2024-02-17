@@ -39,7 +39,7 @@ public class CreditCard {
   private Person holder;
 
   /**
-   * The basic constructor
+   * Standard constructor
    *
    * @param accountNumber 16-digit account number of card
    * @param expirationDate expiration date of card (mm/yy)

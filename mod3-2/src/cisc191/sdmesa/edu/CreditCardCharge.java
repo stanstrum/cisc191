@@ -37,7 +37,7 @@ public class CreditCardCharge {
   private CreditCard card;
 
   /**
-   * Basic constructor
+   * Standard constructor
    *
    * @param year year the charge occurred
    * @param month month the charge occurred

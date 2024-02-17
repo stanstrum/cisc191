@@ -113,7 +113,7 @@ public class Boat
 	}
 
 	/**
-	 * The basic constructor
+	 * Standard constructor
 	 *
 	 * @param make Make of the boat
 	 * @param color Color of the boat

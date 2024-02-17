@@ -12,7 +12,7 @@ public class Harbor {
   Boat[] inventory;
 
   /**
-   * Basic constructor
+   * Standard constructor
    *
    * @param slips amount of slips this {@link Harbor} should have
    */

@@ -22,7 +22,7 @@ public class Person {
   private String zipCode;
 
   /**
-   * Basic constructor
+   * Standard constructor
    *
    * @param name name of person
    * @param phoneNumber phone number of person
