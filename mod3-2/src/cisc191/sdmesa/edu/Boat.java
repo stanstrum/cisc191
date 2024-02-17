@@ -20,71 +20,93 @@ import java.awt.Color;
  */
 public class Boat
 {
-	public Boat() {
-		throw new UnsupportedOperationException("Not implemented");
-	}
+	private static int serialNumberCounter = 1;
+
+	private String make;
+	private Color color;
+	private int speed = 0;
+	private int price = -1;
+
+	private Person owner;
+	private int serialNumber = Boat.createNewSerialNumber();
+
+	public Boat() {}
 
 	public Boat(Boat boat) {
-		throw new UnsupportedOperationException("Not implemented");
+		this.make = boat.make;
+		this.color = boat.color;
+		this.speed = boat.speed;
+		this.price = boat.price;
+
+		this.owner = boat.owner;
 	}
 
 	public Boat(String make, Color color) {
-		throw new UnsupportedOperationException("Not implemented");
+		this.make = make;
+		this.color = color;
 	}
 
 	public String getMake() {
-		throw new UnsupportedOperationException("Not implemented");
+		return this.make;
 	}
 
 	public Color getColor() {
-		throw new UnsupportedOperationException("Not implemented");
+		return this.color;
 	}
 
 	public void setColor(Color color) {
-		throw new UnsupportedOperationException("Not implemented");
+		this.color = color;
 	}
 
 	public int getSpeed() {
-		throw new UnsupportedOperationException("Not implemented");
+		return this.speed;
 	}
 
 	public void speedUp() {
-		throw new UnsupportedOperationException("Not implemented");
+		this.speed++;
 	}
 
 	public void slowDown() {
-		throw new UnsupportedOperationException("Not implemented");
+		this.speed--;
 	}
 
 	public int getPrice() {
-		throw new UnsupportedOperationException("Not implemented");
+		return this.price;
 	}
 
 	public void setPrice(int price) {
-		throw new UnsupportedOperationException("Not implemented");
+		this.price = price;
 	}
 
 	public void setOwner(Person person) {
-		throw new UnsupportedOperationException("Not implemented");
+		this.owner = person;
 	}
 
 	public Person getOwner() {
-		throw new UnsupportedOperationException("Not implemented");
+		return this.owner;
 	}
 
 	public int getSerialNumber() {
-		throw new UnsupportedOperationException("Not implemented");
+		return this.serialNumber;
 	}
 
 	public static int createNewSerialNumber() {
-		throw new UnsupportedOperationException("Not implemented");
+		int serialNumber = Boat.serialNumberCounter;
+
+		Boat.serialNumberCounter++;
+
+		return serialNumber;
 	}
 
 	public boolean equals(Boat otherBoat) {
-		throw new UnsupportedOperationException("Not implemented");
+		// Each boat is instantiated with a unique serial number which
+		// cannot be reassigned.  Therefore, if two Boat objects share
+		// the same serial number, they are the same boat--perhaps with
+		// different properties.
+		return this.serialNumber == otherBoat.getSerialNumber();
 	}
 
 	public String toString() {
-		throw new UnsupportedOperationException("Not implemented");
+		return String.format("Boat: make: %s color: %s", this.make, this.color.toString());
 	}
 }
