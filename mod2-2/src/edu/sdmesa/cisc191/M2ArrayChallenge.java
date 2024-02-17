@@ -2,15 +2,19 @@ package edu.sdmesa.cisc191;
 
 /**
  * Lead Author(s):
- *
  * @author Stan Strum {@literal <sstrum@student.sdccd.edu>}
  * @author Vanessa Tapia {@literal <vtapia001@student.sdccd.edu>}
  *
  * Other contributors:
+ * N/A
  *
  * References:
- * Morelli, R., & Walde, R. (2016). Java, Java, Java: Object-Oriented Problem Solving.
- * Retrieved from https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
+ * - Morelli, R., & Walde, R. (2016). Java, Java, Java: Object-Oriented Problem Solving.
+ *   Retrieved from https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
+ *
+ * - Object. (2014). Java Platform SE 8; Oracle.
+ *   Retrieved from https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--
+ *   Java SE 8 Documentation for {@link Object#clone}
  *
  * Version/date: 9 Feb 2024
  *
