@@ -20,18 +20,71 @@ import java.awt.Color;
  */
 public class Boat
 {
-	public String getMake()
-	{
-		return null;
+	public Boat() {
+		throw new UnsupportedOperationException("Not implemented");
 	}
 
-	public Color getColor()
-	{
-		return null;
+	public Boat(Boat boat) {
+		throw new UnsupportedOperationException("Not implemented");
 	}
 
-	public int getSpeed()
-	{
-		return -99999;
+	public Boat(String make, Color color) {
+		throw new UnsupportedOperationException("Not implemented");
+	}
+
+	public String getMake() {
+		throw new UnsupportedOperationException("Not implemented");
+	}
+
+	public Color getColor() {
+		throw new UnsupportedOperationException("Not implemented");
+	}
+
+	public void setColor(Color color) {
+		throw new UnsupportedOperationException("Not implemented");
+	}
+
+	public int getSpeed() {
+		throw new UnsupportedOperationException("Not implemented");
+	}
+
+	public void speedUp() {
+		throw new UnsupportedOperationException("Not implemented");
+	}
+
+	public void slowDown() {
+		throw new UnsupportedOperationException("Not implemented");
+	}
+
+	public int getPrice() {
+		throw new UnsupportedOperationException("Not implemented");
+	}
+
+	public void setPrice(int price) {
+		throw new UnsupportedOperationException("Not implemented");
+	}
+
+	public void setOwner(Person person) {
+		throw new UnsupportedOperationException("Not implemented");
+	}
+
+	public Person getOwner() {
+		throw new UnsupportedOperationException("Not implemented");
+	}
+
+	public int getSerialNumber() {
+		throw new UnsupportedOperationException("Not implemented");
+	}
+
+	public static int createNewSerialNumber() {
+		throw new UnsupportedOperationException("Not implemented");
+	}
+
+	public boolean equals(Boat otherBoat) {
+		throw new UnsupportedOperationException("Not implemented");
+	}
+
+	public String toString() {
+		throw new UnsupportedOperationException("Not implemented");
 	}
 }
