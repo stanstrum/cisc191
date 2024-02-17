@@ -4,15 +4,25 @@ package cisc191.sdmesa.edu;
  * @author Stan Strum
  */
 public class Person {
-  public Person(String arg0, String arg1, String arg2) {
-    throw new UnsupportedOperationException("Not implemented");
+  private String name;
+  private String phoneNumber;
+  private String zipCode;
+
+  public Person(String name, String phoneNumber, String zipCode) {
+    this.name = name;
+    this.phoneNumber = phoneNumber;
+    this.zipCode = zipCode;
   }
 
   public String getName() {
-    throw new UnsupportedOperationException("Not implemented");
+    return this.name;
   }
 
   public void setName(String name) {
-    throw new UnsupportedOperationException("Not implemented");
+    this.name = name;
+  }
+
+  public String toString() {
+    return String.format("%s %s %s", this.name, this.phoneNumber, this.zipCode);
   }
 }
