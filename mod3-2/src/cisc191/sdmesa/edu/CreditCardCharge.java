@@ -46,7 +46,8 @@ public class CreditCardCharge {
    * @param company vendor for purchase
    * @param card card used for purchase
    */
-  public CreditCardCharge(int year, int month, int day, Boat boat, String company, CreditCard card) {
+  public CreditCardCharge(int year, int month, int day, Boat boat, String company, CreditCard card)
+  {
     this.year = year;
     this.month = month;
     this.day = day;
@@ -58,7 +59,8 @@ public class CreditCardCharge {
   /**
    * @return a String representation of this purchase
    */
-  public String toString() {
+  public String toString()
+  {
     // e.g. "2020/8/14 4444111122223333 12/24 123 Alex Keaton BoatCo SpeedyBoat $19995"
 
     return String.format(

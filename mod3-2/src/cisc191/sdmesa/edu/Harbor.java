@@ -16,7 +16,8 @@ public class Harbor {
    *
    * @param slips amount of slips this {@link Harbor} should have
    */
-  public Harbor(int slips) {
+  public Harbor(int slips)
+  {
     this.inventory = new Boat[slips];
   }
 
@@ -32,7 +33,8 @@ public class Harbor {
    *
    * @return the stored {@link Boat}, if there is one, otherwise {@code null}
    */
-  public Boat getBoatAt(int slip) {
+  public Boat getBoatAt(int slip)
+  {
     return this.inventory[slip];
   }
 
@@ -45,7 +47,8 @@ public class Harbor {
    * @return the {@link Boat} that was stored in the specified slip previously,
    *         otherwise {@code null}
    */
-  public Boat parkBoatAt(Boat newBoat, int slip) {
+  public Boat parkBoatAt(Boat newBoat, int slip)
+  {
     // Get old boat (may be `null`)
     Boat oldBoat = this.inventory[slip];
 
@@ -60,12 +63,14 @@ public class Harbor {
    *
    * @see {@link Harbor#inventory}
    */
-  public Boat[] getInventory() {
+  public Boat[] getInventory()
+  {
     // Duplicate our inventory array so that it cannot be modified by caller
     Boat[] inventoryCopy = new Boat[this.inventory.length];
 
     // Copy each element over
-    for (int i = 0; i < this.inventory.length - 1; i++) {
+    for (int i = 0; i < this.inventory.length - 1; i++)
+    {
       inventoryCopy[i] = inventory[i];
     }
 

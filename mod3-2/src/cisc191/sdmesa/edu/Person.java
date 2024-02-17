@@ -28,7 +28,8 @@ public class Person {
    * @param phoneNumber phone number of person
    * @param zipCode zip code of person
    */
-  public Person(String name, String phoneNumber, String zipCode) {
+  public Person(String name, String phoneNumber, String zipCode)
+  {
     this.name = name;
     this.phoneNumber = phoneNumber;
     this.zipCode = zipCode;
@@ -37,7 +38,8 @@ public class Person {
   /**
    * @return {@link Person#name}
    */
-  public String getName() {
+  public String getName()
+  {
     return this.name;
   }
 
@@ -46,14 +48,16 @@ public class Person {
    *
    * @param name new name
    */
-  public void setName(String name) {
+  public void setName(String name)
+  {
     this.name = name;
   }
 
   /**
    * @return a String representation of this person's basic information
    */
-  public String toString() {
+  public String toString()
+  {
     // e.g. "Alex Keaton 619-555-1212 92111"
 
     return String.format(

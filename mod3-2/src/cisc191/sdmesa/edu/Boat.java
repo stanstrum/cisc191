@@ -102,7 +102,8 @@ public class Boat
 	 *
 	 * @param boat Boat to copy from
 	 */
-	public Boat(Boat boat) {
+	public Boat(Boat boat)
+	{
 		// copy fields
 		this.make = boat.make;
 		this.color = boat.color;
@@ -118,7 +119,8 @@ public class Boat
 	 * @param make Make of the boat
 	 * @param color Color of the boat
 	 */
-	public Boat(String make, Color color) {
+	public Boat(String make, Color color)
+	{
 		this.make = make;
 		this.color = color;
 	}
@@ -126,14 +128,16 @@ public class Boat
 	/**
 	 * @return {@link Boat#make}
 	 */
-	public String getMake() {
+	public String getMake()
+	{
 		return this.make;
 	}
 
 	/**
 	 * @return {@link Boat#color}
 	 */
-	public Color getColor() {
+	public Color getColor()
+	{
 		return this.color;
 	}
 
@@ -142,35 +146,40 @@ public class Boat
 	 *
 	 * @param color new color
 	 */
-	public void setColor(Color color) {
+	public void setColor(Color color)
+	{
 		this.color = color;
 	}
 
 	/**
 	 * @return {@link Boat#speed}
 	 */
-	public int getSpeed() {
+	public int getSpeed()
+	{
 		return this.speed;
 	}
 
 	/**
 	 * Increments {@link Boat#speed}
 	 */
-	public void speedUp() {
+	public void speedUp()
+	{
 		this.speed++;
 	}
 
 	/**
 	 * Decrements {@link Boat#speed}
 	 */
-	public void slowDown() {
+	public void slowDown()
+	{
 		this.speed--;
 	}
 
 	/**
 	 * @return {@link Boat#price}
 	 */
-	public int getPrice() {
+	public int getPrice()
+	{
 		return this.price;
 	}
 
@@ -179,7 +188,8 @@ public class Boat
 	 *
 	 * @param color new price
 	 */
-	public void setPrice(int price) {
+	public void setPrice(int price)
+	{
 		this.price = price;
 	}
 
@@ -188,21 +198,24 @@ public class Boat
 	 *
 	 * @param color new owner
 	 */
-	public void setOwner(Person person) {
+	public void setOwner(Person person)
+	{
 		this.owner = person;
 	}
 
 	/**
 	 * @return {@link Boat#owner}
 	 */
-	public Person getOwner() {
+	public Person getOwner()
+	{
 		return this.owner;
 	}
 
 	/**
 	 * @return {@link Boat#serialnumber}
 	 */
-	public int getSerialNumber() {
+	public int getSerialNumber()
+	{
 		return this.serialNumber;
 	}
 
@@ -212,7 +225,8 @@ public class Boat
 	 *
 	 * @return a unique serial number
 	 */
-	public static int createNewSerialNumber() {
+	public static int createNewSerialNumber()
+	{
 		// Get the next serial number
 		int serialNumber = Boat.nextSerialNumber;
 
@@ -238,14 +252,16 @@ public class Boat
 	 * @return {@code true} if both boats have the same serial number,
 	 *         {@code false} otherwise
 	 */
-	public boolean equals(Boat otherBoat) {
+	public boolean equals(Boat otherBoat)
+	{
 		return this.serialNumber == otherBoat.getSerialNumber();
 	}
 
 	/**
 	 * @return a String representation of this boat
 	 */
-	public String toString() {
+	public String toString()
+	{
 		return String.format("Boat: make: %s color: %s", this.make, this.color.toString());
 	}
 }

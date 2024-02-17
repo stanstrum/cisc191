@@ -46,7 +46,8 @@ public class CreditCard {
    * @param cvv 3-digit CVV of card
    * @param holder cardholder
    */
-  public CreditCard(String accountNumber, String expirationDate, String cvv, Person holder) {
+  public CreditCard(String accountNumber, String expirationDate, String cvv, Person holder)
+  {
     this.accountNumber = accountNumber;
     this.expirationDate = expirationDate;
     this.cvv = cvv;
@@ -56,7 +57,8 @@ public class CreditCard {
   /**
    * @return a String representation of this card
    */
-  public String toString() {
+  public String toString()
+  {
     // e.g. "4444111122223333 12/24 123 Alex Keaton"
 
     return String.format(
