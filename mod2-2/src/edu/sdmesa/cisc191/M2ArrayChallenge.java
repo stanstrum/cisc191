@@ -9,12 +9,8 @@ package edu.sdmesa.cisc191;
  * N/A
  *
  * References:
- * - Morelli, R., & Walde, R. (2016). Java, Java, Java: Object-Oriented Problem Solving.
- *   Retrieved from https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
- *
- * - Object. (2014). Java Platform SE 8; Oracle.
- *   Retrieved from https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--
- *   Java SE 8 Documentation for {@link Object#clone}
+ * Morelli, R., & Walde, R. (2016). Java, Java, Java: Object-Oriented Problem Solving.
+ * Retrieved from https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
  *
  * Version/date: 9 Feb 2024
  *
@@ -230,20 +226,26 @@ public class M2ArrayChallenge {
 	}
 
 	/**
-	 * Copies a char array. This is a shallow copy of the array, as we are making
-	 * a reference to a new copy of the array's values, which are stored in standard-width
-	 * cells. As {@code char} is a primitive type (that fits in pointer width), a
-	 * byte-copy of the element copies the value as it is not a reference itself.
+	 * Makes a copy of the given array
 	 *
 	 * @param array array to copy
 	 *
-	 * @return a new copy of the array
-	 *
-	 * @see {@link Object#clone}
+	 * @return a new array with the same elements as {@code array}
 	 */
 	public static char[] copy(char[] array)
 	{
-		return array.clone();
+		// Initialize a new array with the same length as `array`
+		char[] newArray = new char[array.length];
+
+		// For each index in array ...
+		for (int i = 0; i < array.length; i++)
+		{
+			// Copy the value at index `i` from `array` to `newArray`
+			newArray[i] = array[i];
+		}
+
+		// Return the new array
+		return newArray;
 	}
 
 	/**
