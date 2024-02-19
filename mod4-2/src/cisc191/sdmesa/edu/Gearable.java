@@ -2,28 +2,22 @@ package cisc191.sdmesa.edu;
 
 /**
  * Lead Author(s):
- * @author
- * @author
- * <<add additional lead authors here, with a full first and last name>>
+ * @author Stan Strum {@literal <sstrum@student.sdccd.edu>}
  *
  * Other contributors:
- * <<add additional contributors (mentors, tutors, friends) here, with contact information>>
+ * N/A
  *
  * References:
  * Morelli, R., & Walde, R. (2016). Java, Java, Java: Object-Oriented Problem Solving.
  * Retrieved from https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
  *
- * <<add more references here>>
- *
- * Version/date:
+ * Version/date: 19 Feb 2024
  *
  * Responsibilities of interface:
- *
  */
 public interface Gearable
 {
 	/**
-	 *
 	 * @return the gear that object is currently in
 	 */
 	int getGear();
