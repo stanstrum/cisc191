@@ -27,6 +27,8 @@ import org.junit.jupiter.api.Test;
  * Palindrome. (2020, July 15). Wikipedia, the free encyclopedia.
  * https://en.wikipedia.org/wiki/Palindrome
  *
+ * sponge: https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--
+ *
  * Version/date: 2.0
  *
  * Responsibilities of class:
@@ -103,304 +105,304 @@ class M2TestArrayChallenge
 		assertEquals(0, find(array3, 1));
 	}
 
-	// @Test
-	// void testCountValues()
-	// {
-	// 	char[] array0 = {};
-	// 	assertEquals(0, countValues(array0, 'Q'));
+	@Test
+	void testCountValues()
+	{
+		char[] array0 = {};
+		assertEquals(0, countValues(array0, 'Q'));
 
-	// 	char[] array1 = {'X'};
-	// 	assertEquals(1, countValues(array1, 'X'));
-	// 	assertEquals(0, countValues(array1, 'A'));
+		char[] array1 = {'X'};
+		assertEquals(1, countValues(array1, 'X'));
+		assertEquals(0, countValues(array1, 'A'));
 
-	// 	char[] array2 = "RACECAR".toCharArray();
-	// 	assertEquals(2, countValues(array2, 'R'));
-	// 	assertEquals(2, countValues(array2, 'A'));
-	// 			assertEquals(2, countValues(array2, 'C'));
-	// 			assertEquals(1, countValues(array2, 'E'));
-	// }
-
-	// @Test
-	// void testInOrder()
-	// {
-	// 	int[] array0 = {};
-	// 	assertEquals(true, inOrder(array0));
-
-	// 	int[] array1 = {1};
-	// 	assertEquals(true, inOrder(array1));
-
-	// 	int[] array12 = {1, 2};
-	// 	assertEquals(true, inOrder(array12));
-
-	// 	int[] array21 = {2, 1};
-	// 	assertEquals(false, inOrder(array21));
-
-	// 	int[] array2 = {1, 2, 3};
-	// 	assertEquals(true, inOrder(array2));
-
-	// 			int[] array3 = {1, 3, 2};
-	// 			assertEquals(false, inOrder(array3));
-
-	// 	int[] array4 = {-1, -2, 3};
-	// 	assertEquals(false, inOrder(array4));
-
-	// 	int[] array5 = {-1, -2, -3};
-	// 	assertEquals(false, inOrder(array5));
-
-	// 			int[] array6 = {-3, -2, -1};
-	// 			assertEquals(true, inOrder(array6));
-	// }
-
-	// /**
-	//  * The swap method exchanges two elements in a given array based on index
-	//  */
-	// @Test
-	// void testSwap()
-	// {
-	// 	int[] array0 = {2, 3};
-	// 			int[] array1 = {3, 2};
-	// 	assertArrayEquals(array1, swap(array0, 0));
-
-	// 	int[] array10 = {6, 5, 4};
-	// 		int[] array11 = {5, 6, 4};
-	// 			assertArrayEquals(array11, swap(array10, 0));
-	// 		int[] array12 = {5, 4, 6};
-	// 		assertArrayEquals(array12, swap(array11, 1));
-	// }
-
-	// /**
-	//  * The bubbleUp method would do one pass of an array in the Bubble sort algorithm
-	//  * See: Section Step-by-step example in https://en.wikipedia.org/wiki/Bubble_sort
-	//  * The bubbleUp method does one pass of an array
-	// * Hint: swap
-	// 	*/
-	// @Test
-	// void testBubbleUp()
-	// {
-	// 	int[] array0 = {2, 3};
-	// 			// No change, array is already sorted
-	// 	assertArrayEquals(array0, bubbleUp(array0));
-
-	// 	int[] array1 = {3, 2};
-	// 	assertArrayEquals(new int[] {array1[1], array1[0]}, bubbleUp(array1));
-
-	// 	int[] array10 = {5, 1, 4, 2, 8};
-	// 	int[] array11 = {1, 4, 2, 5, 8};
-	// 	assertArrayEquals(array11, bubbleUp(array10));
-
-	// 	int[] array12 = {1, 2, 4, 5, 8};
-	// 	assertArrayEquals(array12, bubbleUp(array11));
-
-	// 	// No change, array is already sorted
-	// 	assertArrayEquals(array12, bubbleUp(array12));
-	// }
-
-	// /**
-	//  * The bubbleSort method sorts an array.
-	//  * Hint: while the elements are not inOrder, repeatedly use bubbleUp
-	//  */
-	// @Test
-	// void testBubbleSort()
-	// {
-	// 	int[] array0 = {5, 1, 4, 2, 8};
-	// 	int[] array2 = {1, 2, 4, 5, 8};
-	// 	assertArrayEquals(array2, bubbleSort(array0));
-
-	// 		int[] array10 = {4, 3, 2, 1};
-	// 		int[] array11 = {1, 2, 3, 4};
-	// 		assertArrayEquals(array11, bubbleSort(array10));
-	// }
-
-	// /**
-	//  * The copy method returns a new array with the same elements as the original array.
-	//  * Is that a shallow or a deep copy?
-	//  */
-	// @Test
-	// void testCopy()
-	// {
-	// 	char[] array0 = {};
-	// 	assertArrayEquals(array0, copy(array0));
-
-	// 	char[] array1 = {'A'};
-	// 	char[] array1copy = copy(array1);
-	// 	assertArrayEquals(array1, array1copy);
-	// 	assertNotEquals(array1, array1copy);
-	// 	array1copy[0] = 'B';
-	// 	assertEquals('B', array1copy[0]);
-	// 	assertEquals('A', array1[0]);
-
-	// 	char[] array2 = {'X', 'Y', 'Z'};
-	// 	assertNotEquals(array2, copy(array2));
-	// }
-
-	// @Test
-	// void testArrayElementsEqual()
-	// {
-	// 	//An array is equal to itself, expecting true here.
-	// 	char[] array0a = {};
-	// 	assertTrue(arrayElementsEqual(array0a, array0a));
-
-	// 	//Two empty arrays are deemed equal!
-	// 	char[] array0b = {};
-	// 	assertTrue(arrayElementsEqual(array0a, array0b));
-
-	// 	//two arrays of equal length containing the same elements in the same order are equal
-	// 	char[] array1 = {'A'};
-	// 	char[] array2 = copy(array1);
-	// 	assertTrue(arrayElementsEqual(array1, array2));
-
-	// 	//two arrays of the same length but different contents are NOT equal
-	// 	array2[0] = 'B';
-	// 	assertEquals('B', array2[0]);
-	// 	assertEquals('A', array1[0]);
-	// 	assertFalse(arrayElementsEqual(array1, array2));
-
-	// 	//two arrays with different contents and size are not equal
-	// 	char[] array3 = {'X', 'Y', 'Z'};
-	// 	assertFalse(arrayElementsEqual(array0a, array3));
-	// 	assertFalse(arrayElementsEqual(array3, array0a));
-	// 	assertFalse(arrayElementsEqual(array1, array3));
-	// 	assertFalse(arrayElementsEqual(array3, array2));
-	// 	assertTrue(arrayElementsEqual(array3, array3));
-	// }
-
-	// @Test
-	// void testBackwards()
-	// {
-	// 	char[] array0 = {};
-	// 	assertArrayEquals(array0, backwards(array0));
-
-	// 	char[] array1 = {'X'};
-	// 	assertArrayEquals(array1, backwards(array1));
-
-	// 	char[] array2 = {'A', 'B', 'C', 'D'};
-	// 	assertArrayEquals(new char[]{'D', 'C', 'B', 'A'}, backwards(array2));
-	// 	assertArrayEquals(new char[]{'A', 'B', 'C', 'D'}, array2);
-	// }
-
-	// /**
-	//  * A palindrome is a word that is spelled (hint:) equally forwards and (hint:) backwards
-	//  */
-	// @Test
-	// void testIsPalindrome()
-	// {
-	// 	char[] array0 = {};
-	// 	assertEquals(true, isPalindrome(array0));
-
-	// 	char[] array1 = {'X'};
-	// 	assertEquals(true, isPalindrome(array1));
-
-	// 	char[] array2 = "AB".toCharArray();
-	// 	assertEquals(false, isPalindrome(array2));
-
-	// 	char[] array3 = "XX".toCharArray();
-	// 	assertEquals(true, isPalindrome(array3));
-
-	// 	char[] array4 = "PALINDROME".toCharArray();
-	// 	assertEquals(false, isPalindrome(array4));
-
-	// 	char[] array5 = "RACECAR".toCharArray();
-	// 	assertEquals(true, isPalindrome(array5));
-	// }
+		char[] array2 = "RACECAR".toCharArray();
+		assertEquals(2, countValues(array2, 'R'));
+		assertEquals(2, countValues(array2, 'A'));
+				assertEquals(2, countValues(array2, 'C'));
+				assertEquals(1, countValues(array2, 'E'));
+	}
 
 	@Test
-	void testGetElement()
+	void testInOrder()
 	{
-		int[][] matrix = {{1, 2, 3},
-							{4, 5, 6},
-							{7, 8, 9}};
-		assertEquals(1, getElement(matrix, 0, 0));
-		assertEquals(2, getElement(matrix, 0, 1));
-		assertEquals(4, getElement(matrix, 1, 0));
+		int[] array0 = {};
+		assertEquals(true, inOrder(array0));
+
+		int[] array1 = {1};
+		assertEquals(true, inOrder(array1));
+
+		int[] array12 = {1, 2};
+		assertEquals(true, inOrder(array12));
+
+		int[] array21 = {2, 1};
+		assertEquals(false, inOrder(array21));
+
+		int[] array2 = {1, 2, 3};
+		assertEquals(true, inOrder(array2));
+
+				int[] array3 = {1, 3, 2};
+				assertEquals(false, inOrder(array3));
+
+		int[] array4 = {-1, -2, 3};
+		assertEquals(false, inOrder(array4));
+
+		int[] array5 = {-1, -2, -3};
+		assertEquals(false, inOrder(array5));
+
+				int[] array6 = {-3, -2, -1};
+				assertEquals(true, inOrder(array6));
+	}
+
+	/**
+	 * The swap method exchanges two elements in a given array based on index
+	 */
+	@Test
+	void testSwap()
+	{
+		int[] array0 = {2, 3};
+				int[] array1 = {3, 2};
+		assertArrayEquals(array1, swap(array0, 0));
+
+		int[] array10 = {6, 5, 4};
+			int[] array11 = {5, 6, 4};
+				assertArrayEquals(array11, swap(array10, 0));
+			int[] array12 = {5, 4, 6};
+			assertArrayEquals(array12, swap(array11, 1));
+	}
+
+	/**
+	 * The bubbleUp method would do one pass of an array in the Bubble sort algorithm
+	 * See: Section Step-by-step example in https://en.wikipedia.org/wiki/Bubble_sort
+	 * The bubbleUp method does one pass of an array
+	* Hint: swap
+		*/
+	@Test
+	void testBubbleUp()
+	{
+		int[] array0 = {2, 3};
+				// No change, array is already sorted
+		assertArrayEquals(array0, bubbleUp(array0));
+
+		int[] array1 = {3, 2};
+		assertArrayEquals(new int[] {array1[1], array1[0]}, bubbleUp(array1));
+
+		int[] array10 = {5, 1, 4, 2, 8};
+		int[] array11 = {1, 4, 2, 5, 8};
+		assertArrayEquals(array11, bubbleUp(array10));
+
+		int[] array12 = {1, 2, 4, 5, 8};
+		assertArrayEquals(array12, bubbleUp(array11));
+
+		// No change, array is already sorted
+		assertArrayEquals(array12, bubbleUp(array12));
+	}
+
+	/**
+	 * The bubbleSort method sorts an array.
+	 * Hint: while the elements are not inOrder, repeatedly use bubbleUp
+	 */
+	@Test
+	void testBubbleSort()
+	{
+		int[] array0 = {5, 1, 4, 2, 8};
+		int[] array2 = {1, 2, 4, 5, 8};
+		assertArrayEquals(array2, bubbleSort(array0));
+
+			int[] array10 = {4, 3, 2, 1};
+			int[] array11 = {1, 2, 3, 4};
+			assertArrayEquals(array11, bubbleSort(array10));
+	}
+
+	/**
+	 * The copy method returns a new array with the same elements as the original array.
+	 * Is that a shallow or a deep copy?
+	 */
+	@Test
+	void testCopy()
+	{
+		char[] array0 = {};
+		assertArrayEquals(array0, copy(array0));
+
+		char[] array1 = {'A'};
+		char[] array1copy = copy(array1);
+		assertArrayEquals(array1, array1copy);
+		assertNotEquals(array1, array1copy);
+		array1copy[0] = 'B';
+		assertEquals('B', array1copy[0]);
+		assertEquals('A', array1[0]);
+
+		char[] array2 = {'X', 'Y', 'Z'};
+		assertNotEquals(array2, copy(array2));
+	}
+
+	@Test
+	void testArrayElementsEqual()
+	{
+		//An array is equal to itself, expecting true here.
+		char[] array0a = {};
+		assertTrue(arrayElementsEqual(array0a, array0a));
+
+		//Two empty arrays are deemed equal!
+		char[] array0b = {};
+		assertTrue(arrayElementsEqual(array0a, array0b));
+
+		//two arrays of equal length containing the same elements in the same order are equal
+		char[] array1 = {'A'};
+		char[] array2 = copy(array1);
+		assertTrue(arrayElementsEqual(array1, array2));
+
+		//two arrays of the same length but different contents are NOT equal
+		array2[0] = 'B';
+		assertEquals('B', array2[0]);
+		assertEquals('A', array1[0]);
+		assertFalse(arrayElementsEqual(array1, array2));
+
+		//two arrays with different contents and size are not equal
+		char[] array3 = {'X', 'Y', 'Z'};
+		assertFalse(arrayElementsEqual(array0a, array3));
+		assertFalse(arrayElementsEqual(array3, array0a));
+		assertFalse(arrayElementsEqual(array1, array3));
+		assertFalse(arrayElementsEqual(array3, array2));
+		assertTrue(arrayElementsEqual(array3, array3));
+	}
+
+	@Test
+	void testBackwards()
+	{
+		char[] array0 = {};
+		assertArrayEquals(array0, backwards(array0));
+
+		char[] array1 = {'X'};
+		assertArrayEquals(array1, backwards(array1));
+
+		char[] array2 = {'A', 'B', 'C', 'D'};
+		assertArrayEquals(new char[]{'D', 'C', 'B', 'A'}, backwards(array2));
+		assertArrayEquals(new char[]{'A', 'B', 'C', 'D'}, array2);
+	}
+
+	/**
+	 * A palindrome is a word that is spelled (hint:) equally forwards and (hint:) backwards
+	 */
+	@Test
+	void testIsPalindrome()
+	{
+		char[] array0 = {};
+		assertEquals(true, isPalindrome(array0));
+
+		char[] array1 = {'X'};
+		assertEquals(true, isPalindrome(array1));
+
+		char[] array2 = "AB".toCharArray();
+		assertEquals(false, isPalindrome(array2));
+
+		char[] array3 = "XX".toCharArray();
+		assertEquals(true, isPalindrome(array3));
+
+		char[] array4 = "PALINDROME".toCharArray();
+		assertEquals(false, isPalindrome(array4));
+
+		char[] array5 = "RACECAR".toCharArray();
+		assertEquals(true, isPalindrome(array5));
 	}
 
 	// @Test
-	// void testAddRow()
+	// void testGetElement()
 	// {
-	// 	int[][] matrix1 = {{1, 2, 3},
-	// 							{4, 5, 6},
-	// 							{7, 8, 9}};
-	// 		// Hint: have you implemented a method that can do the sum?
-	// 	assertEquals(1+2+3, addRow(matrix1, 0));
-	// 	assertEquals(4+5+6, addRow(matrix1, 1));
-	// 	assertEquals(7+8+9, addRow(matrix1, 2));
-
-	// 	int[][] matrix2 = {{1, 2, 3, 4},
-	// 									{5, 6, 7, 8},
-	// 									{9, 10, 11, 12}};
-	// 	assertEquals(1+2+3+4, addRow(matrix2, 0));
-	// 	assertEquals(5+6+7+8, addRow(matrix2, 1));
-	// 	assertEquals(9+10+11+12, addRow(matrix2, 2));
+		// int[][] matrix = {{1, 2, 3},
+							// {4, 5, 6},
+							// {7, 8, 9}};
+		// assertEquals(1, getElement(matrix, 0, 0));
+		// assertEquals(2, getElement(matrix, 0, 1));
+		// assertEquals(4, getElement(matrix, 1, 0));
 	// }
 
-	// @Test
-	// void testAddColumn()
-	// {
-	// 	// Assume that the input arrays are not ragged
-	// 	int[][] matrix1 = {{1, 2, 3},
-	// 								{4, 5, 6},
-	// 								{7, 8, 9}};
-	// 	assertEquals(1+4+7, addColumn(matrix1, 0));
-	// 	assertEquals(2+5+8, addColumn(matrix1, 1));
-	// 	assertEquals(3+6+9, addColumn(matrix1, 2));
+	@Test
+	void testAddRow()
+	{
+		int[][] matrix1 = {{1, 2, 3},
+								{4, 5, 6},
+								{7, 8, 9}};
+			// Hint: have you implemented a method that can do the sum?
+		assertEquals(1+2+3, addRow(matrix1, 0));
+		assertEquals(4+5+6, addRow(matrix1, 1));
+		assertEquals(7+8+9, addRow(matrix1, 2));
 
-	// 	int[][] matrix2 = {{1, 2, 3},
-	// 									{4, 5, 6},
-	// 									{7, 8, 9},
-	// 									{10, 11, 12}};
-	// 	assertEquals(1+4+7+10, addColumn(matrix2, 0));
-	// 	assertEquals(2+5+8+11, addColumn(matrix2, 1));
-	// 	assertEquals(3+6+9+12, addColumn(matrix2, 2));
-	// }
+		int[][] matrix2 = {{1, 2, 3, 4},
+										{5, 6, 7, 8},
+										{9, 10, 11, 12}};
+		assertEquals(1+2+3+4, addRow(matrix2, 0));
+		assertEquals(5+6+7+8, addRow(matrix2, 1));
+		assertEquals(9+10+11+12, addRow(matrix2, 2));
+	}
 
-	// @Test
-	// void testAddLeftToRightDiagonal()
-	// {
-	// 	// Assume that the input arrays are square
+	@Test
+	void testAddColumn()
+	{
+		// Assume that the input arrays are not ragged
+		int[][] matrix1 = {{1, 2, 3},
+									{4, 5, 6},
+									{7, 8, 9}};
+		assertEquals(1+4+7, addColumn(matrix1, 0));
+		assertEquals(2+5+8, addColumn(matrix1, 1));
+		assertEquals(3+6+9, addColumn(matrix1, 2));
 
-	// 	int[][] array0 = {};
-	// 	assertEquals(0, addLeftToRightDiagonal(array0));
+		int[][] matrix2 = {{1, 2, 3},
+										{4, 5, 6},
+										{7, 8, 9},
+										{10, 11, 12}};
+		assertEquals(1+4+7+10, addColumn(matrix2, 0));
+		assertEquals(2+5+8+11, addColumn(matrix2, 1));
+		assertEquals(3+6+9+12, addColumn(matrix2, 2));
+	}
 
-	// 	int[][] matrix1 = {{1, 2, 3},
-	// 							{4, 5, 6},
-	// 							{7, 8, 9}};
-	// 	assertEquals(1+5+9, addLeftToRightDiagonal(matrix1));
+	@Test
+	void testAddLeftToRightDiagonal()
+	{
+		// Assume that the input arrays are square
 
-	// 	int[][] matrix2 = {{1,   2,  3,  4},
-	// 							{5,   6,  7,  8},
-	// 							{9,  10, 11, 12},
-	// 							{13, 14, 15, 20}};
-	// 	assertEquals(1+6+11+20, addLeftToRightDiagonal(matrix2));
-	// }
+		int[][] array0 = {};
+		assertEquals(0, addLeftToRightDiagonal(array0));
 
-	// @Test
-	// void testAddRightToLeftDiagonal()
-	// {
-	// 		// Assume that the input arrays are square
+		int[][] matrix1 = {{1, 2, 3},
+								{4, 5, 6},
+								{7, 8, 9}};
+		assertEquals(1+5+9, addLeftToRightDiagonal(matrix1));
 
-	// 	int[][] array0 = {};
-	// 	assertEquals(0, addRightToLeftDiagonal(array0));
+		int[][] matrix2 = {{1,   2,  3,  4},
+								{5,   6,  7,  8},
+								{9,  10, 11, 12},
+								{13, 14, 15, 20}};
+		assertEquals(1+6+11+20, addLeftToRightDiagonal(matrix2));
+	}
 
-	// 	int[][] matrix1 = {{1, 2, 3},
-	// 								{4, 5, 6},
-	// 								{7, 8, 9}};
-	// 	assertEquals(3+5+7, addRightToLeftDiagonal(matrix1));
+	@Test
+	void testAddRightToLeftDiagonal()
+	{
+			// Assume that the input arrays are square
 
-	// 	int[][] matrix2 = {{1,   2,  3,  4},
-	// 							{5,   6,  7,  8},
-	// 							{9,  10, 11, 12},
-	// 							{13, 14, 15, 20}};
-	// 	assertEquals(4+7+10+13, addRightToLeftDiagonal(matrix2));
-	// }
+		int[][] array0 = {};
+		assertEquals(0, addRightToLeftDiagonal(array0));
 
-	// @Test
-	// void testAddLastRowElement()
-	// {
-	// 	int[][] matrix2 = {{1,   2,  3,  4},
-	// 									{5,   6,  7},
-	// 									{9,  10},
-	// 									{13, 14, 15, 16}};
-	// 	assertEquals(4+7+10+16, addLastRowElement(matrix2));
+		int[][] matrix1 = {{1, 2, 3},
+									{4, 5, 6},
+									{7, 8, 9}};
+		assertEquals(3+5+7, addRightToLeftDiagonal(matrix1));
 
-	// }
+		int[][] matrix2 = {{1,   2,  3,  4},
+								{5,   6,  7,  8},
+								{9,  10, 11, 12},
+								{13, 14, 15, 20}};
+		assertEquals(4+7+10+13, addRightToLeftDiagonal(matrix2));
+	}
+
+	@Test
+	void testAddLastRowElement()
+	{
+		int[][] matrix2 = {{1,   2,  3,  4},
+										{5,   6,  7},
+										{9,  10},
+										{13, 14, 15, 16}};
+		assertEquals(4+7+10+16, addLastRowElement(matrix2));
+
+	}
 }
