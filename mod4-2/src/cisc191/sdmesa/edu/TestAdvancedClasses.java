@@ -68,7 +68,7 @@ class TestAdvancedClasses
 {
 
 	@Test
-    @Order(1)
+	@Order(1)
 	void testAbstractInheritance1()
 	{
 		Cycle cycle = new Unicycle("Uni1");
