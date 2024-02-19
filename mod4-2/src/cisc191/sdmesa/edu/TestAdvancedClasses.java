@@ -15,58 +15,58 @@ import org.junit.jupiter.api.TestMethodOrder;
 /**
  * Lead Author(s):
  * @author Tasha Frankie
- * @author Allan Schougaard 
- * 
+ * @author Allan Schougaard
+ *
  * Other contributors:
  * None
- * 
+ *
  * References:
  * Morelli, R., & Walde, R. (2016). Java, Java, Java: Object-Oriented Problem Solving.
  * https://open.umn.edu/opentextbooks/textbooks/java-java-java-object-oriented-problem-solving
- * 
- * Bechtold, S., Brannen, S., Link, J., Merdes, M., Philipp, M., Rancourt, J. D., & Stein, C. (n.d.). 
- * JUnit 5 user guide. JUnit 5. 
+ *
+ * Bechtold, S., Brannen, S., Link, J., Merdes, M., Philipp, M., Rancourt, J. D., & Stein, C. (n.d.).
+ * JUnit 5 user guide. JUnit 5.
  * https://junit.org/junit5/docs/current/user-guide/
- * 
- * Version/date: 1.0  
- * 
+ *
+ * Version/date: 1.0
+ *
  * Responsibilities of class:
  * Test class and methods to support a push bike shop
  */
 
 /**
  * Your mission, should you choose to accept it:
- * 
+ *
  * For each of the test methods below create a method in a class that
  * makes the test run and pass.
- * 
+ *
  * Each class must be in a separate file. Use File -> New -> Class
- * 
+ *
  * Read the test methods to understand what the classes' methods
  * should do. The assertEquals methods check to see if the two arguments are
  * equal. If they are equal the test passes; if not, the test will be marked as
  * failed and the execution stops.
- * 
+ *
  * To run the tests in this file from the main menu, select Run -> Run As -> JUnit
  * with the file selected.
- * 
+ *
  * To implement a test method:
- * 
+ *
  * 1. Uncomment the entire test method. To uncomment a block, select the block
  * and hold down Ctrl while typing /
- * 
+ *
  * 2. To make the test compile and run: implement a method with the correct
  * signature, but returning a fake value, such as -1, null or similar. After
  * this the test method should run but fail.
- * 
+ *
  * 3. To make the tests pass: Then change the method to return the correct value
  * and run the test again.
- * 
+ *
  */
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class TestAdvancedClasses
 {
-	
+
 	@Test
     @Order(1)
 	void testAbstractInheritance1()
@@ -115,7 +115,7 @@ class TestAdvancedClasses
 //	    // The String returned from toString has to contain the color as expressed by toString in the Color objects
 //		assertTrue(cycle1.toString().contains("java.awt.Color[r=0,g=0,b=255]"));
 //		assertTrue(cycle2.toString().contains("java.awt.Color[r=0,g=255,b=0]"));
-//		
+//
 //		Bicycle bike1 = new Bicycle("Toony");
 //		Bicycle bike2 = new Bicycle("Toony");
 //		assertTrue(bike1.toString().contains("Toony"));
@@ -128,8 +128,8 @@ class TestAdvancedClasses
 //		assertTrue(bike1.toString().contains("java.awt.Color[r=0,g=0,b=255]"));
 //		assertTrue(bike2.toString().contains("java.awt.Color[r=255,g=0,b=0]"));
 //	}
-	
-//  @Order(4)	
+
+//  @Order(4)
 //	@Test
 //	void testEquals()
 //	{
@@ -137,12 +137,12 @@ class TestAdvancedClasses
 //		cycle1.setColor(Color.BLUE);
 //		Cycle cycle2 = new Unicycle("Uni");
 //		cycle2.setColor(Color.BLUE);
-//		
+//
 //		// Cycles are "equal" if their frame numbers are the same
 //		assertTrue(cycle1.equals(cycle1));
 //		assertFalse(cycle1.equals(cycle2));
 //		assertFalse(cycle2.equals(cycle1));
-//		
+//
 //		Bicycle bike1 = new Bicycle("Toony");
 //		bike1.setColor(Color.RED);
 //		Bicycle bike2 = new Bicycle("Toony");
@@ -151,7 +151,7 @@ class TestAdvancedClasses
 //		assertTrue(bike1.equals(bike1));
 //		assertFalse(bike1.equals(bike2));
 //		assertFalse(bike2.equals(bike1));
-//		
+//
 //		assertFalse(cycle1.equals("Not a bike"));
 //		assertFalse(cycle1.equals(null));
 //
@@ -166,7 +166,7 @@ class TestAdvancedClasses
 //		Gearable vehicle1 = new ElectricMountainBike("E2");
 //		assertEquals(1, vehicle1.getGear());
 //		assertEquals("E2", ((Cycle) vehicle1).getMake());
-//		
+//
 //		ElectricMountainBike vehicle2 = new ElectricMountainBike("E3");
 //		assertEquals(1, vehicle2.getGear());
 //		vehicle2.gearUp();
@@ -193,7 +193,7 @@ class TestAdvancedClasses
 //		Movable vehicle1 = new ElectricMountainBike("E1");
 //		assertEquals(0, vehicle1.getSpeed());
 //		assertEquals("E1", ((Cycle) vehicle1).getMake());
-//		
+//
 //		Movable vehicle2 = new ElectricMountainBike("E2");
 //		assertEquals(0, vehicle2.getSpeed());
 //		vehicle2.speedUp();
@@ -201,30 +201,30 @@ class TestAdvancedClasses
 //		vehicle2.speedUp();
 //		assertEquals(2, vehicle2.getSpeed());
 //	}
-	
-//  @Order(8)	
+
+//  @Order(8)
 //	@Test
 //	void testDynamicBinding()
 //	{
 //		BikeShop shop = new BikeShop("Joe's Bike Rack");
 //		assertTrue(shop.toString().contains("Joe's Bike Rack"));
-//		
+//
 //		shop.addToInventory(new ElectricMountainBike("BigMountainBike"));
 //		assertTrue(shop.toString().contains("BigMountainBike");
-//		
+//
 //		shop.addToInventory(new Unicycle("Looney"));
-//		assertTrue(shop.toString().contains("BigMountainBike"));		
+//		assertTrue(shop.toString().contains("BigMountainBike"));
 //		assertTrue(shop.toString().contains("Looney"));
-//		
+//
 //		shop.addToInventory(new Bicycle("Tooney"));
-//		assertTrue(shop.toString().contains("BigMountainBike"));		
+//		assertTrue(shop.toString().contains("BigMountainBike"));
 //		assertTrue(shop.toString().contains("Looney"));
-//		assertTrue(shop.toString().contains("Tooney"));	
-//	
+//		assertTrue(shop.toString().contains("Tooney"));
+//
 //		shop.addToInventory(new ElectricMountainBike("EMB"));
-//		assertTrue(shop.toString().contains("BigMountainBike"));		
+//		assertTrue(shop.toString().contains("BigMountainBike"));
 //		assertTrue(shop.toString().contains("Looney"));
-//		assertTrue(shop.toString().contains("Tooney"));	
+//		assertTrue(shop.toString().contains("Tooney"));
 //		assertTrue(shop.toString().contains("EMB"));
 //	}
 
