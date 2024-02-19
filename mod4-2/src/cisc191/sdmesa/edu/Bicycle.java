@@ -1,5 +1,7 @@
 package cisc191.sdmesa.edu;
 
+import java.awt.Color;
+
 /**
  * Lead Author(s):
  * @author Stan Strum {@literal <sstrum@student.sdccd.edu>}
@@ -16,6 +18,24 @@ package cisc191.sdmesa.edu;
  * Responsibilities of class:
  * A a Bicycle is a Cycle with two wheels
  */
-public class Bicycle
+public class Bicycle extends Cycle
 {
+  public Bicycle(String arg0) {
+    super(arg0);
+  }
+
+	@Override
+	int getNumberOfWheels() {
+		throw new UnsupportedOperationException("Not implemented");
+	}
+
+	@Override
+	Color getColor() {
+		throw new UnsupportedOperationException("Not implemented");
+	}
+
+	@Override
+	void setColor(Color newColor) {
+		throw new UnsupportedOperationException("Not implemented");
+	}
 }

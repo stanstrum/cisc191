@@ -1,5 +1,7 @@
 package cisc191.sdmesa.edu;
 
+import java.awt.Color;
+
 /**
  * Lead Author(s):
  * @author Stan Strum {@literal <sstrum@student.sdccd.edu>}
@@ -17,6 +19,26 @@ package cisc191.sdmesa.edu;
  * A Unicycle is a Cycle with only one wheel
  */
 
-public class Unicycle
+public class Unicycle extends Cycle
 {
+	public Unicycle(String arg0) {
+		super(arg0);
+
+		throw new UnsupportedOperationException("Not implemented");
+	}
+
+	@Override
+	int getNumberOfWheels() {
+		throw new UnsupportedOperationException("Not implemented");
+	}
+
+	@Override
+	Color getColor() {
+		throw new UnsupportedOperationException("Not implemented");
+	}
+
+	@Override
+	void setColor(Color newColor) {
+		throw new UnsupportedOperationException("Not implemented");
+	}
 }
