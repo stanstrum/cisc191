@@ -22,11 +22,20 @@ public abstract class Cycle implements Movable
 	// A cycle has a unique frame number, that is *immutable*;
 	// How are you going to make it immutable, so that it only gets one final number?
 	// (Hint: did you see the hint?)
-	private int frameNumber;
+	private final int frameNumber = Cycle.generateFrameNumber();
+
+	private final String make;
+
+	private static int nextFrameNumber = 0;
+
+	private static int generateFrameNumber() {
+		return Cycle.nextFrameNumber++;
+	}
 
 	// A cycle has a make, that is immutable
-	public Cycle(String newMake)
+	public Cycle(String make)
 	{
+		this.make = make;
 	}
 
 	abstract int getNumberOfWheels();
@@ -48,7 +57,7 @@ public abstract class Cycle implements Movable
 	 */
 	public String getMake()
 	{
-		return null;
+		return this.make;
 	}
 
 	/**
@@ -57,7 +66,7 @@ public abstract class Cycle implements Movable
 	 */
 	public int getFrameNumber()
 	{
-		return -1;
+		return this.frameNumber;
 	}
 
 	/**
@@ -66,9 +75,11 @@ public abstract class Cycle implements Movable
 	@Override
 	public boolean equals(Object other)
 	{
-		// Hint: use instanceof
-		// See: https://www.sitepoint.com/implement-javas-equals-method-correctly/
-		return false;
+		if (other instanceof Cycle) {
+			return false;
+		}
+
+		return this.getFrameNumber() == ((Cycle)other).getFrameNumber();
 	}
 
 	/**
@@ -77,7 +88,6 @@ public abstract class Cycle implements Movable
 	@Override
 	public String toString()
 	{
-		//TODO:
-		return "Hello, I'm a Cycle";
+		throw new UnsupportedOperationException("Not implemented");
 	}
 }
