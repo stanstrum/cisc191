@@ -41,4 +41,14 @@ public class Unicycle extends Cycle
 	void setColor(Color newColor) {
 		throw new UnsupportedOperationException("Not implemented");
 	}
+
+	@Override
+	public int getSpeed() {
+		throw new UnsupportedOperationException("Not implemented");
+	}
+
+	@Override
+	public void speedUp() {
+		throw new UnsupportedOperationException("Not implemented");
+	}
 }

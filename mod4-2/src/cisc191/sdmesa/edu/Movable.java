@@ -17,5 +17,6 @@ package cisc191.sdmesa.edu;
  */
 public interface Movable
 {
-
+  int getSpeed();
+  void speedUp();
 }

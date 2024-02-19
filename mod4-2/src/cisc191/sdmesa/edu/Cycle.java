@@ -17,7 +17,7 @@ import java.awt.Color;
  *
  * Responsibilities of class:
  */
-public abstract class Cycle
+public abstract class Cycle implements Movable
 {
 	// A cycle has a unique frame number, that is *immutable*;
 	// How are you going to make it immutable, so that it only gets one final number?

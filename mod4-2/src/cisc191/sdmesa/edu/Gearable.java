@@ -21,4 +21,7 @@ public interface Gearable
 	 * @return the gear that object is currently in
 	 */
 	int getGear();
+
+	void gearUp();
+	void gearDown();
 }

@@ -17,6 +17,21 @@ package cisc191.sdmesa.edu;
  * ElectricMountainBike is a Bicyle that is Movable, Gearable, and Electric
  */
 
-public class ElectricMountainBike
+public class ElectricMountainBike extends Bicycle implements Electric
 {
+  public ElectricMountainBike(String arg0) {
+		super(arg0);
+
+		throw new UnsupportedOperationException("Not implemented");
+  }
+
+  @Override
+  public void charge(int arg0) {
+		throw new UnsupportedOperationException("Not implemented");
+  }
+
+  @Override
+  public int getCharge() {
+		throw new UnsupportedOperationException("Not implemented");
+  }
 }

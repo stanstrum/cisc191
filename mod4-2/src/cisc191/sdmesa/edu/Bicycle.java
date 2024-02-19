@@ -18,7 +18,7 @@ import java.awt.Color;
  * Responsibilities of class:
  * A a Bicycle is a Cycle with two wheels
  */
-public class Bicycle extends Cycle
+public class Bicycle extends Cycle implements Gearable
 {
   public Bicycle(String arg0) {
     super(arg0);
@@ -38,4 +38,29 @@ public class Bicycle extends Cycle
 	void setColor(Color newColor) {
 		throw new UnsupportedOperationException("Not implemented");
 	}
+
+	@Override
+	public int getGear() {
+		throw new UnsupportedOperationException("Not implemented");
+	}
+
+  @Override
+  public void gearUp() {
+		throw new UnsupportedOperationException("Not implemented");
+  }
+
+  @Override
+  public void gearDown() {
+		throw new UnsupportedOperationException("Not implemented");
+  }
+
+  @Override
+  public int getSpeed() {
+    throw new UnsupportedOperationException("Not implemented");
+  }
+
+  @Override
+  public void speedUp() {
+    throw new UnsupportedOperationException("Not implemented");
+  }
 }
