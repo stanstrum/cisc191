@@ -16,17 +16,30 @@ import java.awt.Color;
  * Version/date: 19 Feb 2024
  *
  * Responsibilities of class:
- * A Unicycle is a Cycle with only one wheel
+ * A Unicycle is a Cycle (therefore Movable) with only one wheel
  */
 
 public class Unicycle extends Cycle
 {
+	/**
+	 * The unicycle's color
+	 */
 	private Color color;
 
+	/**
+	 * The unicycle's current speed
+	 */
 	private int speed = 0;
 
-	public Unicycle(String arg0) {
-		super(arg0);
+	/**
+	 * Standard constructor
+	 *
+	 * @param make the make of the unicycle, immutable
+	 *
+	 * @see {@link Cycle#Cycle(String)}
+	 */
+	public Unicycle(String make) {
+		super(make);
 	}
 
 	@Override

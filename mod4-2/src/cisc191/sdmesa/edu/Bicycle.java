@@ -16,21 +16,39 @@ import java.awt.Color;
  * Version/date: 19 Feb 2024
  *
  * Responsibilities of class:
- * A a Bicycle is a Cycle with two wheels
+ * A Bicycle is a Cycle (therefore Movable) with two wheels that utilizes gears (Gearable).
  */
 public class Bicycle extends Cycle implements Gearable
 {
+	/**
+	 * The bike's color
+	 */
 	private Color color;
+
+	/**
+	 * The bike's speed
+	 */
 	private int speed;
 
+	/**
+	 * The gear that the bike is currently in
+	 */
 	private int gear = 1;
 
-  public Bicycle(String arg0) {
-    super(arg0);
+	/**
+	 * Standard constructor
+	 *
+	 * @param make make of bicycle at time of manufacture, immutable
+	 *
+	 * @see {@link Cycle#Cycle(String)}
+	 */
+  public Bicycle(String make) {
+    super(make);
   }
 
 	@Override
 	int getNumberOfWheels() {
+		// A bicycle has two wheels
 		return 2;
 	}
 

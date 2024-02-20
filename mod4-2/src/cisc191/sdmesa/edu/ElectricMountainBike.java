@@ -14,15 +14,25 @@ package cisc191.sdmesa.edu;
  * Version/date: 19 Feb 2024
  *
  * Responsibilities of class:
- * ElectricMountainBike is a Bicyle that is Movable, Gearable, and Electric
+ * ElectricMountainBike is a Bicyle (therefore Movable, Gearable)that is , and Electric
  */
 
 public class ElectricMountainBike extends Bicycle implements Electric
 {
+  /**
+   * The electric bike's current charge
+   */
   private int charge;
 
-  public ElectricMountainBike(String arg0) {
-		super(arg0);
+  /**
+   * Standard constructor
+   *
+   * @param make the make of the electric bike, immutable
+   *
+   * @see {@link Cycle#Cycle(String)}
+   */
+  public ElectricMountainBike(String make) {
+		super(make);
   }
 
   @Override

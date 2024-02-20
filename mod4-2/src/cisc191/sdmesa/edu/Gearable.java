@@ -14,6 +14,7 @@ package cisc191.sdmesa.edu;
  * Version/date: 19 Feb 2024
  *
  * Responsibilities of interface:
+ * Gearable is an interface that allows for modifying a gearable object's internal gear state
  */
 public interface Gearable
 {
@@ -22,6 +23,13 @@ public interface Gearable
 	 */
 	int getGear();
 
+	/**
+	 * Increments the object's gear
+	 */
 	void gearUp();
+
+	/**
+	 * Decrements the object's gear
+	 */
 	void gearDown();
 }

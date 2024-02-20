@@ -14,9 +14,17 @@ package cisc191.sdmesa.edu;
  * Version/date: 19 Feb 2024
  *
  * Responsibilities of class:
+ * A movable object has a speed that may be externally modified
  */
 public interface Movable
 {
+  /**
+   * @return the object's current speed
+   */
   int getSpeed();
+
+  /**
+   * Increment's the object's current speed
+   */
   void speedUp();
 }
