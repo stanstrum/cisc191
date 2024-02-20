@@ -7,7 +7,7 @@
 CONFIG=".mk_archive.json"
 
 echoError() {
-  if [ ! -z "${@}" ]; then
+  if [ ! -z "$*" ]; then
     echo -n "error: " >&2
   fi
 
@@ -16,7 +16,7 @@ echoError() {
 
 usageExit() {
   echoError "usage: ./mk_archive.sh <input folder> [author?]"
-  echoError
+  echoError " "
   echoError -e "author\t\tAuthor's name, can also be set via env AUTHOR"
 
   exit 1
