@@ -62,6 +62,16 @@ public class Bicycle extends Cycle implements Gearable
 		this.color = color;
 	}
 
+  @Override
+  public int getSpeed() {
+    return this.speed;
+  }
+
+  @Override
+  public void speedUp() {
+    this.speed++;
+  }
+
 	@Override
 	public int getGear() {
 		return this.gear;
@@ -75,15 +85,5 @@ public class Bicycle extends Cycle implements Gearable
   @Override
   public void gearDown() {
 		this.gear--;
-  }
-
-  @Override
-  public int getSpeed() {
-    return this.speed;
-  }
-
-  @Override
-  public void speedUp() {
-    this.speed++;
   }
 }

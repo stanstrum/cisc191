@@ -29,18 +29,18 @@ public abstract class Cycle implements Movable
 	private final int frameNumber = Cycle.generateFrameNumber();
 
 	/**
-	 * The cycle's make at time of manufacture.  While one may rebuild
-	 * a bicycle to resemble a different model, this field must always
-	 * correspond to what was originally sold.
-	 */
-	private final String make;
-
-	/**
 	 * An internal counter for generating unique frame numbers.
 	 *
 	 * Do not touch.
 	 */
 	private static int nextFrameNumber = 1;
+
+	/**
+	 * The cycle's make at time of manufacture.  While one may rebuild
+	 * a bicycle to resemble a different model, this field must always
+	 * correspond to what was originally sold.
+	 */
+	private final String make;
 
 	/**
 	 * A helper method to acquire a new, unique frame number and increment
@@ -73,16 +73,13 @@ public abstract class Cycle implements Movable
 	abstract int getNumberOfWheels();
 
 	/**
-	 * @return the color of the bike; can be null
+	 * @return the unique serial number that was stamped in the frame when the bike was made
+	 * @see https://www.eta.co.uk/bicycle-insurance/frequently-asked-questions/how-to-find-a-bicycle-frame-number/
 	 */
-	abstract Color getColor();
-
-	/**
-	 * Changes the color of the bike
-	 *
-	 * @param color
-	 */
-	abstract void setColor(Color color);
+	public int getFrameNumber()
+	{
+		return this.frameNumber;
+	}
 
 	/**
 	 * @return make or brand that was set when the bike was made
@@ -93,13 +90,16 @@ public abstract class Cycle implements Movable
 	}
 
 	/**
-	 * @return the unique serial number that was stamped in the frame when the bike was made
-	 * @see https://www.eta.co.uk/bicycle-insurance/frequently-asked-questions/how-to-find-a-bicycle-frame-number/
+	 * @return the color of the bike; can be null
 	 */
-	public int getFrameNumber()
-	{
-		return this.frameNumber;
-	}
+	abstract Color getColor();
+
+	/**
+	 * Changes the color of the bike
+	 *
+	 * @param color
+	 */
+	abstract void setColor(Color color);
 
 	/**
 	 * Compares two {@link Cycle Cycles} by frame number.  Note that no unique cycle
