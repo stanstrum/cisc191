@@ -6,15 +6,15 @@ package cisc191.sdmesa.edu;
  * @author Stan Strum {@literal <sstrum@student.sdccd.edu>}
  */
 public interface Electric {
-  /**
-   * @return the electric object's current charge
-   */
-  int getCharge();
+	/**
+	 * @return the electric object's current charge
+	 */
+	int getCharge();
 
-  /**
-   * Charges an electric object by a specified amount
-   *
-   * @param amount amount to charge by
-   */
-  void charge(int amount);
+	/**
+	 * Charges an electric object by a specified amount
+	 *
+	 * @param amount amount to charge by
+	 */
+	void charge(int amount);
 }

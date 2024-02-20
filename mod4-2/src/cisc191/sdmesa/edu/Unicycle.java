@@ -38,33 +38,39 @@ public class Unicycle extends Cycle
 	 *
 	 * @see {@link Cycle#Cycle(String)}
 	 */
-	public Unicycle(String make) {
+	public Unicycle(String make)
+	{
 		super(make);
 	}
 
 	@Override
-	int getNumberOfWheels() {
+	int getNumberOfWheels()
+	{
 		// A unicycle has one wheel
 		return 1;
 	}
 
 	@Override
-	Color getColor() {
+	Color getColor()
+	{
 		return this.color;
 	}
 
 	@Override
-	void setColor(Color color) {
+	void setColor(Color color)
+	{
 		this.color = color;
 	}
 
 	@Override
-	public int getSpeed() {
+	public int getSpeed()
+	{
 		return this.speed;
 	}
 
 	@Override
-	public void speedUp() {
+	public void speedUp()
+	{
 		this.speed++;
 	}
 }

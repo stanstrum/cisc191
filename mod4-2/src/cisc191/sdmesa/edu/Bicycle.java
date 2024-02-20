@@ -42,48 +42,57 @@ public class Bicycle extends Cycle implements Gearable
 	 *
 	 * @see {@link Cycle#Cycle(String)}
 	 */
-  public Bicycle(String make) {
-    super(make);
-  }
+	public Bicycle(String make)
+	{
+		super(make);
+	}
 
 	@Override
-	int getNumberOfWheels() {
+	int getNumberOfWheels()
+	{
 		// A bicycle has two wheels
 		return 2;
 	}
 
 	@Override
-	Color getColor() {
+	Color getColor()
+	{
 		return this.color;
 	}
 
 	@Override
-	void setColor(Color color) {
+	void setColor(Color color)
+	{
 		this.color = color;
 	}
 
-  @Override
-  public int getSpeed() {
-    return this.speed;
-  }
-
-  @Override
-  public void speedUp() {
-    this.speed++;
-  }
+	@Override
+	public int getSpeed()
+	{
+		return this.speed;
+	}
 
 	@Override
-	public int getGear() {
+	public void speedUp()
+	{
+		this.speed++;
+	}
+
+	@Override
+	public int getGear()
+	{
 		return this.gear;
 	}
 
-  @Override
-  public void gearUp() {
+	@Override
+	public void gearUp()
+	{
 		this.gear++;
-  }
+	}
 
-  @Override
-  public void gearDown() {
+	@Override
+	public void gearDown()
+	{
 		this.gear--;
-  }
+	}
 }

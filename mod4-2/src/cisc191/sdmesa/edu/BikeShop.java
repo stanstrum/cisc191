@@ -24,7 +24,8 @@ public class BikeShop {
 	 *
 	 * @param name the bike shop's name
 	 */
-	public BikeShop(String name) {
+	public BikeShop(String name)
+	{
 		this.name = name;
 	}
 
@@ -33,12 +34,14 @@ public class BikeShop {
 	 *
 	 * @param cycle cycle to add
 	 */
-  public void addToInventory(Cycle cycle) {
+	public void addToInventory(Cycle cycle)
+	{
 		this.inventory.add(cycle);
-  }
+	}
 
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		return String.format("BikeShop: %s, inventory: %s", this.name, this.inventory.toString());
 	}
 }

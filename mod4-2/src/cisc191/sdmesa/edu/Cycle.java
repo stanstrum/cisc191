@@ -48,7 +48,8 @@ public abstract class Cycle implements Movable
 	 *
 	 * @return a unique frame number
 	 */
-	private static int generateFrameNumber() {
+	private static int generateFrameNumber()
+	{
 		return Cycle.nextFrameNumber++;
 	}
 
@@ -114,7 +115,8 @@ public abstract class Cycle implements Movable
 	public boolean equals(Object other)
 	{
 		// If other object is not a cycle, it cannot be equal
-		if (other instanceof Cycle == false) {
+		if (other instanceof Cycle == false)
+		{
 			return false;
 		}
 
