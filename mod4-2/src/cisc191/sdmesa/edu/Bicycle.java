@@ -20,47 +20,52 @@ import java.awt.Color;
  */
 public class Bicycle extends Cycle implements Gearable
 {
+	private Color color;
+	private int speed;
+
+	private int gear = 1;
+
   public Bicycle(String arg0) {
     super(arg0);
   }
 
 	@Override
 	int getNumberOfWheels() {
-		throw new UnsupportedOperationException("Not implemented");
+		return 2;
 	}
 
 	@Override
 	Color getColor() {
-		throw new UnsupportedOperationException("Not implemented");
+		return this.color;
 	}
 
 	@Override
-	void setColor(Color newColor) {
-		throw new UnsupportedOperationException("Not implemented");
+	void setColor(Color color) {
+		this.color = color;
 	}
 
 	@Override
 	public int getGear() {
-		throw new UnsupportedOperationException("Not implemented");
+		return this.gear;
 	}
 
   @Override
   public void gearUp() {
-		throw new UnsupportedOperationException("Not implemented");
+		this.gear++;
   }
 
   @Override
   public void gearDown() {
-		throw new UnsupportedOperationException("Not implemented");
+		this.gear--;
   }
 
   @Override
   public int getSpeed() {
-    throw new UnsupportedOperationException("Not implemented");
+    return this.speed;
   }
 
   @Override
   public void speedUp() {
-    throw new UnsupportedOperationException("Not implemented");
+    this.speed++;
   }
 }

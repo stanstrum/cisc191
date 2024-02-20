@@ -19,19 +19,19 @@ package cisc191.sdmesa.edu;
 
 public class ElectricMountainBike extends Bicycle implements Electric
 {
+  private int charge;
+
   public ElectricMountainBike(String arg0) {
 		super(arg0);
-
-		throw new UnsupportedOperationException("Not implemented");
   }
 
   @Override
-  public void charge(int arg0) {
-		throw new UnsupportedOperationException("Not implemented");
+  public void charge(int charge) {
+    this.charge += charge;
   }
 
   @Override
   public int getCharge() {
-		throw new UnsupportedOperationException("Not implemented");
+		return this.charge;
   }
 }

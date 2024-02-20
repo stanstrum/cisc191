@@ -26,7 +26,7 @@ public abstract class Cycle implements Movable
 
 	private final String make;
 
-	private static int nextFrameNumber = 0;
+	private static int nextFrameNumber = 1;
 
 	private static int generateFrameNumber() {
 		return Cycle.nextFrameNumber++;
@@ -75,7 +75,7 @@ public abstract class Cycle implements Movable
 	@Override
 	public boolean equals(Object other)
 	{
-		if (other instanceof Cycle) {
+		if (other instanceof Cycle == false) {
 			return false;
 		}
 
@@ -88,6 +88,6 @@ public abstract class Cycle implements Movable
 	@Override
 	public String toString()
 	{
-		throw new UnsupportedOperationException("Not implemented");
+		return String.format("Uni, make: %s, frame number: %d, color: %s", this.getMake(), this.getFrameNumber(), this.getColor());
 	}
 }

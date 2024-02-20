@@ -21,34 +21,37 @@ import java.awt.Color;
 
 public class Unicycle extends Cycle
 {
+	private Color color;
+
+	private int speed = 0;
+
 	public Unicycle(String arg0) {
 		super(arg0);
-
-		throw new UnsupportedOperationException("Not implemented");
 	}
 
 	@Override
 	int getNumberOfWheels() {
-		throw new UnsupportedOperationException("Not implemented");
+		// A unicycle has one wheel
+		return 1;
 	}
 
 	@Override
 	Color getColor() {
-		throw new UnsupportedOperationException("Not implemented");
+		return this.color;
 	}
 
 	@Override
-	void setColor(Color newColor) {
-		throw new UnsupportedOperationException("Not implemented");
+	void setColor(Color color) {
+		this.color = color;
 	}
 
 	@Override
 	public int getSpeed() {
-		throw new UnsupportedOperationException("Not implemented");
+		return this.speed;
 	}
 
 	@Override
 	public void speedUp() {
-		throw new UnsupportedOperationException("Not implemented");
+		this.speed++;
 	}
 }
