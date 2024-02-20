@@ -128,6 +128,7 @@ class TestAdvancedClasses
 		assertTrue(bike2.toString().contains("java.awt.Color[r=255,g=0,b=0]"));
 	}
 
+	@SuppressWarnings("unlikely-arg-type")
 	@Order(4)
 	@Test
 	void testEquals()
